@@ -1,3 +1,4 @@
++font("OpenSans-Light", OpenSans-Light)
 +font("OpenSans-Bold", OpenSans-Bold)
 +font("OpenSans-Extrabold", OpenSans-Extrabold)
 +font("Roboto-Bold", Roboto-Bold)
@@ -6,6 +7,8 @@
 
 =f($name, $font-size: null, $line-height: null, $letter-spacing: null)
   $font-family: null
+  @if $name == "ol"
+    $font-family: "OpenSans-Light"
   @if $name == "ob"
     $font-family: "OpenSans-Bold"
   @if $name == "oeb"
