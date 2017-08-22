@@ -121,25 +121,25 @@ html {
 .icon-arrow {
   width: 0.49em;
   height: 1em;
-  fill: initial;
+  fill: currentColor;
 }
 
 .icon-facebook {
   width: 1em;
   height: 1em;
-  fill: #475993;
+  fill: currentColor;
 }
 
 .icon-instagram {
   width: 1em;
   height: 1em;
-  fill: url(#a);
+  fill: currentColor;
 }
 
 .icon-snapchat {
   width: 1em;
   height: 1em;
-  fill: #050505;
+  fill: currentColor;
 }
 
 body {
