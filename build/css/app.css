@@ -147,8 +147,9 @@ body {
   font-family: "Roboto-Light", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
-  line-height: 28/14;
-  font-smoothing: antialiased;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .inner {
