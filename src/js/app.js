@@ -1,3 +1,6 @@
-import sayHello from './lib/sayHello.js';
+import jQuery from 'jquery';
 
-sayHello();
+window.$ = jQuery;
+window.jQuery = jQuery;
+
+import common from './_common';

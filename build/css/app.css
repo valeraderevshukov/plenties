@@ -188,6 +188,7 @@ body {
 }
 
 .footer__link {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   color: #000;
@@ -196,6 +197,21 @@ body {
   font-size: 12px;
   line-height: 2.66667;
   letter-spacing: 0.04em;
+}
+
+.no-touch .footer__link:hover:before {
+  opacity: 1;
+}
+
+.footer__link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid currentColor;
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
 }
 
 @media (prefers-reduced-motion: reduce) {
