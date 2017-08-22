@@ -85,9 +85,39 @@ body {
   line-height: 1.4;
 }
 
-.block {
-  display: -ms-flexbox;
-  display: flex;
+.inner {
+  position: relative;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1186px;
+}
+
+.inner:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer:before, .footer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.footer:before {
+  left: 0;
+  background: #fff;
+}
+
+.footer:after {
+  right: 0;
+  background: #f5f5f5;
 }
 
 @media (min-width: 1000px) {
