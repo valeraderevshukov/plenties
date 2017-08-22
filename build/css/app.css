@@ -127,19 +127,19 @@ html {
 .icon-facebook {
   width: 1em;
   height: 1em;
-  fill: initial;
+  fill: #475993;
 }
 
 .icon-instagram {
   width: 1em;
   height: 1em;
-  fill: initial;
+  fill: url(#a);
 }
 
 .icon-snapchat {
-  width: 1.06em;
+  width: 1em;
   height: 1em;
-  fill: initial;
+  fill: #050505;
 }
 
 body {
@@ -155,9 +155,9 @@ body {
 .inner {
   position: relative;
   z-index: 10;
-  padding: 0 15px;
+  padding: 0 105px;
   margin: 0 auto;
-  max-width: 1186px;
+  max-width: 1366px;
 }
 
 .inner:after {
@@ -270,7 +270,11 @@ body {
 .header__btn-menu {
   float: left;
   margin-top: 29px;
-  z-index: 3;
+  z-index: 12;
+}
+
+.header__inner {
+  z-index: initial;
 }
 
 .header__logo {
@@ -280,6 +284,7 @@ body {
 
 .header__menu {
   float: left;
+  z-index: 11;
 }
 
 .header__list {
@@ -315,7 +320,6 @@ body {
   right: 0;
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
-  z-index: 2;
   background-color: #fff;
 }
 
@@ -378,6 +382,35 @@ body {
   color: inherit;
 }
 
+.reviews {
+  padding-bottom: 120px;
+  margin-bottom: -120px;
+  background: #f8f8f8;
+}
+
+.review__img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.review__meta {
+  color: #9f9f9f;
+  font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+.review__text {
+  font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2.28571;
+  letter-spacing: 0.04em;
+}
+
 .results__container {
   padding: 200px 0 163px;
   margin: 0 auto;
@@ -393,6 +426,7 @@ body {
 .results__title {
   padding: 53px 0 7px;
   color: #000;
+  background: #fff;
   font-family: "Roboto-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -658,13 +692,19 @@ body {
 
 .footer__social a {
   padding: 7px 9px;
+  color: #000;
 }
 
 .footer__social .icon {
+  fill: currentColor;
   font-size: 32px;
 }
 
 @media only screen and (max-width: 1023px) {
+
+  .inner {
+    padding: 0 50px;
+  }
 
   .contact {
     padding: 80px 0;
@@ -680,6 +720,10 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+
+  .inner {
+    padding: 0 30px;
+  }
 
   .contact__title {
     max-width: 300px;
