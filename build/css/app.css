@@ -64,6 +64,10 @@ table {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -192,7 +196,6 @@ body {
   font-size: 12px;
   line-height: 2.66667;
   letter-spacing: 0.04em;
-  text-decoration: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
