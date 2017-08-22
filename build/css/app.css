@@ -72,6 +72,34 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .icon-facebook {
   width: 0.53em;
   height: 1em;
@@ -80,28 +108,15 @@ html {
 
 body {
   background: #FFF;
-  font-size: 50px;
-  font-size: calc(16px + (50 - 16) * ((100vw - 600px) / (1000 - 600)));
-  line-height: 1.4;
+  font-family: "Roboto-Light", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28/14;
 }
 
 .block {
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (min-width: 1000px) {
-
-  body {
-    font-size: 50px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  body {
-    font-size: 16px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
