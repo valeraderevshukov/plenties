@@ -1,0 +1,37 @@
+<!-- begin reviews -->
+<div class="reviews">
+	<!-- begin inner -->
+	<div class="inner">
+		{% set reviews = [
+			{
+				title: 'EMMA Zhang',
+				meta: 'Student',
+				text: '“The shipping was amazingly fast. Order what you need, when you need it and save yourself the trips to the big-box stores. The website is easy to use and fun to browse through. Free samples is a great bonus. The whole process is cost effective and efficient. Give Plenties a try, I think you&#39;ll like it!”'
+			},
+			{
+				title: 'Sofie Nielsen',
+				meta: 'Graphic Designer',
+				text: ''
+			},
+			{
+				title: 'William Olsen',
+				meta: 'Enterpreneur',
+				text: ''
+			}
+		] %}	
+		<div class="reviews__row">
+			{% for item in reviews %}
+				<div class="reviews__col">
+					<div class="review">
+						<div class="review__img" style="background: url(https://placecage.com/50/50);"></div>
+						<div class="title-sm review__title">{{item.title}}</div>
+						<div class="review__meta">{{item.meta}}</div>
+						<div class="review__text">{{items.text | safe}}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<!-- end inner -->
+</div>
+<!-- end reviews -->
