@@ -670,7 +670,8 @@ body {
   }
 
   .footer {
-    padding: 0;
+    padding: 40px 0;
+    background: #f5f5f5;
   }
 
   .footer:before, .footer:after {
@@ -678,12 +679,16 @@ body {
   }
 
   .footer__col {
-    padding: 40px 15px;
+    padding: 20px 15px;
     width: 100%;
   }
 
-  .footer__col:last-child {
-    background: #f5f5f5;
+  .footer__nav {
+    margin-bottom: 50px;
+  }
+
+  .footer__description {
+    display: none;
   }
 }
 
