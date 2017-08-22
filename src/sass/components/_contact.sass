@@ -1,0 +1,46 @@
+.contact
+	padding: 257px 0 190px
+	color: $white
+	background: #232323
+	+md
+		padding: 80px 0
+	&__container
+		margin: 0 auto
+		max-width: 1000px
+		+clr
+	&__info,
+	&__form
+		float: left
+		padding: 0 15px
+		width: 50%
+		+md
+			float: none
+			padding: 0
+			margin: 0 auto
+			width: 100%
+			max-width: 480px
+	&__info
+		&-in
+			max-width: 400px
+		p
+			+f(rt, 16, 28, 40)
+	&__title
+		margin-bottom: 15px
+		opacity: 0.35
+		+f(oeb, 80, 90)
+		+sm
+			max-width: 300px
+			font-size: 48px
+	&__field
+		padding: 21px 0
+	&__buttons
+		padding-top: 15px
+	&__btn
+		color: $white
+		opacity: 0.5
+		background: none
+		+f(oeb, 12, 20)
+		text-transform: uppercase
+		transition: opacity 0.175s ease-in-out
+		+hover
+			opacity: 1

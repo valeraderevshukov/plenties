@@ -2,50 +2,52 @@
 <footer class="footer">
 	<!-- begin inner -->
 	<div class="inner">
-		<div class="footer__col">
-			<nav class="footer__nav">
+		<div class="footer__row">
+			<div class="footer__col">
+				<nav class="footer__nav">
+					<ul class="footer__list">
+						<li><a href="#" class="footer__link">Shop</a></li>
+						<li><a href="#" class="footer__link">About</a></li>
+						<li><a href="#" class="footer__link">Help</a></li>
+						<li><a href="#" class="footer__link">Sign in</a></li>
+					</ul>
+					<ul class="footer__list">
+						<li><a href="#" class="footer__link">Work with us</a></li>
+						<li><a href="#" class="footer__link">Join our team</a></li>
+						<li><a href="#" class="footer__link">Suggest a product</a></li>
+						<li><a href="#" class="footer__link">Say hi to us</a></li>
+					</ul>
+				</nav>
 				<ul class="footer__list">
-					<li><a href="#" class="footer__link">Shop</a></li>
-					<li><a href="#" class="footer__link">About</a></li>
-					<li><a href="#" class="footer__link">Help</a></li>
-					<li><a href="#" class="footer__link">Sign in</a></li>
+					<li><a href="#" class="footer__link">Dansk</a></li>
+					<li><a href="#" class="footer__link">English</a></li>
 				</ul>
-				<ul class="footer__list">
-					<li><a href="#" class="footer__link">Work with us</a></li>
-					<li><a href="#" class="footer__link">Join our team</a></li>
-					<li><a href="#" class="footer__link">Suggest a product</a></li>
-					<li><a href="#" class="footer__link">Say hi to us</a></li>
+				<div class="footer__logo">
+					<a href="#">
+						<img src="img/logo.svg" alt="plenties">
+					</a>
+				</div>
+			</div>
+			<div class="footer__col">
+				<div class="footer__description">
+					<p>Do you follow us on <br>Social Media?</p>
+					<p>If not, we highly reccomend it, because you woudn’t want to miss our best deals.</p>
+				</div>
+				{% set social = [
+					'instagram',
+					'facebook',
+					'snapchat'
+				] %}
+				<ul class="footer__social">
+					{% for item in social %}
+						<li>
+							<a href="#">
+								{{mixins.icon(item)}}
+							</a>
+						</li>
+					{% endfor %}
 				</ul>
-			</nav>
-			<ul class="footer__list">
-				<li><a href="#" class="footer__link">Dansk</a></li>
-				<li><a href="#" class="footer__link">English</a></li>
-			</ul>
-			<div class="footer__logo">
-				<a href="#">
-					<img src="img/logo.svg" alt="plenties">
-				</a>
 			</div>
-		</div>
-		<div class="footer__col">
-			<div class="footer__description">
-				<p>Do you follow us on <br>Social Media?</p>
-				<p>If not, we highly reccomend it, because you woudn’t want to miss our best deals.</p>
-			</div>
-			{% set social = [
-				'instagram',
-				'facebook',
-				'snapchat'
-			] %}
-			<ul class="footer__social">
-				{% for item in social %}
-					<li>
-						<a href="#">
-							{{mixins.icon(item)}}
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
 		</div>
 	</div>
 	<!-- end inner -->

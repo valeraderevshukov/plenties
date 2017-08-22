@@ -1,5 +1,8 @@
 .footer
 	position: relative
+	padding: 99px 0
+	+sm
+		padding: 0
 	&:before,
 	&:after
 		content: ''
@@ -7,20 +10,44 @@
 		top: 0
 		bottom: 0
 		width: 50%
+		+sm
+			display: none
 	&:before
 		left: 0
 		background: $white
 	&:after
 		right: 0
 		background: $lightGray
+	&__row
+		margin: 0 -15px
 	&__col
 		float: left
+		padding: 0 15px
 		width: 50%
+		+sm
+			padding: 40px 15px
+			width: 100%
+		&:last-child
+			+sm
+				background: $lightGray
 	&__nav
+		margin-bottom: 90px
 		+clr
-	&__list
+	&__list,
+	&__logo
 		float: left
 		width: 50%
+	&__logo
+		a
+			display: inline-block
+			vertical-align: top
+			width: 66px
+			color: $black
+			+f(rt,12,32,40)
+		img
+			display: inline-block
+			vertical-align: top
+			width: 100%
 	&__link
 		position: relative
 		display: inline-block
@@ -35,7 +62,27 @@
 			position: absolute
 			left: 0
 			right: 0
-			bottom: 0
+			bottom: 5px
 			border-bottom: 1px solid currentColor
 			opacity: 0
 			transition: opacity 0.15s ease-in
+	&__description
+		margin: 0 auto
+		max-width: 240px
+		color: $text
+		+f(rt,14,32,40)
+		text-align: center
+		p
+			margin-bottom: 33px
+	&__social
+		color: $black
+		font-size: 0
+		text-align: center
+		li,
+		a
+			display: inline-block
+			vertical-align: top
+		a
+			padding: 7px 9px
+		.icon
+			font-size: 32px
