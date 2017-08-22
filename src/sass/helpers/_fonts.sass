@@ -1,0 +1,27 @@
+// +font("GothamPro-Light", GothamPro-Light)
+// +font("GothamPro", GothamPro)
+// +font("GothamPro-Medium", GothamPro-Medium)
+// +font("ProximaNova-Bold", ProximaNova-Bold)
+// +font("ProximaNova-Regular", ProximaNova-Regular)
+
+// =f($name, $font-size: null, $line-height: null, $letter-spacing: null)
+//   $font-family: null
+//   @if $name == "gl"
+//     $font-family: "GothamPro-Light"
+//   @if $name == "gm"
+//     $font-family: "GothamPro-Medium"
+//   @if $name == "gr"
+//     $font-family: "GothamPro"
+//   @if $name == "pb"
+//     $font-family: "ProximaNova-Bold"
+//   @if $name == "pr"
+//     $font-family: "ProximaNova-Regular"
+//   font-family: $font-family, Helvetica Neue, Helvetica, Arial, sans-serif
+//   @if $font-family != null
+//     font-weight: normal
+//   @if $font-size != null
+//     font-size: $font-size * 1px
+//   @if $line-height != null
+//     line-height: $line-height/$font-size
+//   @if $letter-spacing != null
+//     letter-spacing: ($letter-spacing / 1000) * 1em
