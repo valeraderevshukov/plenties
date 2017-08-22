@@ -152,6 +152,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.row {
+  margin: 0 -10px;
+}
+
+.row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding: 0 10px;
+}
+
+.col_lg-33 {
+  width: 33.33%;
+}
+
 .inner {
   position: relative;
   z-index: 10;
@@ -383,19 +402,26 @@ body {
 }
 
 .reviews {
-  padding-bottom: 120px;
+  padding: 317px 0 387px;
   margin-bottom: -120px;
   background: #f8f8f8;
 }
 
+.review {
+  padding: 30px 10px;
+  margin: 0 auto;
+  max-width: 290px;
+}
+
 .review__img {
+  margin-bottom: 20px;
   border-radius: 50%;
   width: 60px;
   height: 60px;
 }
 
 .review__meta {
-  color: #9f9f9f;
+  color: #b9b9b9;
   font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -404,6 +430,7 @@ body {
 }
 
 .review__text {
+  padding-top: 20px;
   font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -702,8 +729,21 @@ body {
 
 @media only screen and (max-width: 1023px) {
 
+  .col_md-100 {
+    width: 100%;
+  }
+
   .inner {
     padding: 0 50px;
+  }
+
+  .reviews {
+    padding: 100px 0 170px;
+  }
+
+  .review {
+    max-width: 100%;
+    padding: 30px 0;
   }
 
   .contact {

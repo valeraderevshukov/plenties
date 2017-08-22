@@ -1,15 +1,35 @@
 .reviews
-	padding-bottom: 120px
+	padding: 317px 0 387px
 	margin-bottom: -120px
 	background: #f8f8f8
+	+md
+		padding: 100px 0 170px
+	// &__row
+	// 	margin: 0 -10px
+	// &__col
+	// 	float: left
+	// 	padding: 30px 20px
+	// 	width: 33.33%
+	// 	+md
+	// 		width: 100%
+	// 		padding: 30px 10px
+
 
 .review
+	padding: 30px 10px
+	margin: 0 auto
+	max-width: 290px
+	+md
+		max-width: 100%
+		padding: 30px 0
 	&__img
+		margin-bottom: 20px
 		border-radius: 50%
 		width: 60px
 		height: 60px
 	&__meta
-		color: #9f9f9f
+		color: #b9b9b9
 		+f(rt,12,24,40)
 	&__text
+		padding-top: 20px
 		+f(rt,14,32,40)
