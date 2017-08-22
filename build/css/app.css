@@ -141,6 +141,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 28/14;
+  font-smoothing: antialiased;
 }
 
 .inner {
@@ -154,6 +155,69 @@ body {
   content: " ";
   display: table;
   clear: both;
+}
+
+.btn-menu {
+  position: relative;
+  width: 33px;
+  height: 18px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.btn-menu:before {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+}
+
+.btn-menu__line {
+  position: absolute;
+  left: 0;
+  width: 33px;
+  height: 2px;
+  background-color: #000;
+  display: block;
+}
+
+.btn-menu__line_top {
+  top: 0;
+}
+
+.btn-menu__line_middle {
+  top: 8px;
+}
+
+.btn-menu__line_button {
+  bottom: 0;
+}
+
+.header__menu {
+  float: left;
+}
+
+.header__list {
+  float: right;
+  font-size: 12px;
+  font-family: "OpenSans-Extrabold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.header__list li {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.header__list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header__list a {
+  color: #000;
 }
 
 .footer {

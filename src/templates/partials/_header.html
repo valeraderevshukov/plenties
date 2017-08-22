@@ -2,13 +2,51 @@
 <header class="header">
 	<div class="header__inner inner">
 		<div class="header__menu js-header-menu">
-			<button class="btn-menu js-btn-menu" type="button"></button>
+			<!-- btn-menu -->
+			<button class="btn-menu js-btn-menu" type="button">
+				<span class="btn-menu__line btn-menu__line_top"></span>
+				<span class="btn-menu__line btn-menu__line_middle"></span>
+				<span class="btn-menu__line btn-menu__line_button"></span>
+			</button>
+			<!-- ¯\_(ツ)_/¯ -->
+			<!-- logo -->
 			<div class="logo">
 				<img src="./img/logo.svg" alt="logo">
 			</div>
+			<!-- ¯\_(ツ)_/¯ -->
+			{% set menuData = [
+				{
+					title: "Navigate",
+					texts: ["SHOP", "ABOUT", "HELP", "SIGN IN"]
+				},
+				{
+					title: "Language",
+					texts: ["DANSK", "ENGLISH"]
+				},
+				{
+					title: "Follow  Us",
+					texts: ["instagram", "facebook", "snapchat"]
+				}
+			] %}
+			<!-- menu -->
 			<div class="menu">
-				
+				<div class="menu__logo">
+					<img src="./img/logo.svg" alt="logo">
+				</div>
+				<div class="menu__wrap">
+					{% for data in menuData %}
+						<div class="menu__col">
+							<div class="menu__title">{{ data.title }}</div>
+							<ul class="menu__list">
+								{% for text in data.texts %}
+									<li><a href="#">{{ text }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
+			<!-- ¯\_(ツ)_/¯ -->
 		</div>
 		<ul class="header__list">
 			<li><a href="#">SIGN IN</a></li>

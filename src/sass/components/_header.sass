@@ -1,0 +1,14 @@
+.header
+	&__menu
+		float: left
+	&__list
+		float: right
+		font-size: 12px
+		+f('oeb', 12)
+		li
+			vertical-align: top
+			display: inline-block
+			&:not(:last-child)
+				margin-right: 10px
+		a
+			color: $black 
