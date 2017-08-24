@@ -1,9 +1,14 @@
 .results
+	margin-top: -120px
+	+md
+		margin-top: -70px
 	&__container
 		padding: 200px 0 163px
 		margin: 0 auto
 		max-width: 1000px
 		+clr
+		+md
+			padding: 30px 0 60px
 	&__title
 		padding: 53px 0 7px
 		color: $black
@@ -11,12 +16,20 @@
 		+f(rb, 16, 60)
 		text-align: center
 		text-transform: uppercase
+		+md
+			padding-top: 13px
 	&__info
 		float: left
 		padding-top: 10px
 		max-width: 200px
+		+md
+			float: none
+			padding-bottom: 20px
+			margin: 0 auto
 	&__box
 		padding: 28px 0 27px
+		+md
+			padding: 20px 0 0
 		&:not(:last-child)
 			&:after
 				content: ''
@@ -28,29 +41,52 @@
 		text-transform: uppercase
 	&__content
 		+f(rt, 14, 28, 40)
-		margin-bottom: 68px
+		margin-bottom: 68px 
+		+md
+			margin-bottom: 30px
 	&__images
 		position: relative
 		float: right
+		width: 70%
 		max-width: 610px
-		width: 100%
 		height: 480px
+		+md
+			float: none
+			margin: 0 auto
+			width: 100%
+		+sm
+			max-width: 320px
+			height: auto
 	&__image
 		position: absolute
 		width: 320px
-		height: 320px
+		max-width: 100%
 		background: #f8f8f8
+		+sm 
+			position: relative
+		+ .results__image
+			margin-top: 30px
 		&[data-item="1"]
 			z-index: 10
 			top: 0
 			left: 0
+			+sm
+				top: auto
+				left: auto
 		&[data-item="2"]
 			z-index: 5
-			bottom: 0
 			right: 0
+			bottom: 0
+			+sm
+				right: auto
+				bottom: auto
 		&-in
 			width: 100%
-			height: 100%
+			height: 0
+			padding-bottom: 100%
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: cover
 
 		
 
