@@ -401,6 +401,62 @@ body {
   color: inherit;
 }
 
+.hero__wrap {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.hero__left, .hero__right {
+  display: table-cell;
+}
+
+.hero__left {
+  padding-right: 10%;
+  width: 53.6%;
+}
+
+.hero__right {
+  width: 46.4%;
+  vertical-align: bottom;
+}
+
+.hero__info {
+  margin-top: 20px;
+}
+
+.proggres-slider__slide:not(:first-child) {
+  display: none;
+}
+
+.sm-banner {
+  padding: 40px 35px;
+  line-height: 1;
+  background-color: #ffb82b;
+}
+
+.sm-banner:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.sm-banner__number {
+  float: left;
+  font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 60px;
+}
+
+.sm-banner__wrap {
+  float: left;
+  margin-top: 4px;
+  padding-left: 10px;
+  font-family: "OpenSans-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+}
+
 .reviews {
   padding: 317px 0 387px;
   background: #f8f8f8;
