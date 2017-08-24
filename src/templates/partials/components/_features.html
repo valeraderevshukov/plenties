@@ -1,0 +1,45 @@
+<!-- features -->
+<div class="features">
+	<div class="features__inner inner">
+		<div class="features__navigation">
+			<!-- navigation -->
+			<div class="navigation js-navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item"><a class="navigation__link js-navigation-link" href="#">SAVINGS</a></li>
+					<li class="navigation__item"><a class="navigation__link js-navigation-link" href="#">EFFICIENCY</a></li>
+					<li class="navigation__item"><a class="navigation__link js-navigation-link" href="#">CONVENIENCE</a></li>
+				</ul>
+			</div>
+			<!-- ¯\_(ツ)_/¯ -->
+		</div>
+		<div class="features__content">
+			{% set featuresData = [
+				{
+					title: "Save Up to 75% on Everyday Purchases",
+					text: "Can you imagine how much you can save a month? A Year? Why pay more if you can pay less?",
+					img: "1"
+				},
+				{
+					title: "Free Yourself From Trips to Stores",
+					text: "Save an hour or two out of your precious weekend by doing shopping online",
+					img: "2"
+				},
+				{
+					title: "Get Free <br>and Fast Shipping",
+					text: "We have our own shipping service and usually deliver within 24 hour right to your door",
+					img: "3"
+				}
+			] %}
+			{% for data in featuresData %}
+				<div class="features__item">
+					<div class="features__title title-md">{{ data.title | safe}}</div>
+					<p>{{ data.text }}</p>
+					<div class="features__img">
+						<img src="./img/features-img-{{ data.img }}.jpg" alt="img">
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- ¯\_(ツ)_/¯ -->

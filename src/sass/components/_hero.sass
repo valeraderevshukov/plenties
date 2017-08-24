@@ -9,12 +9,19 @@
 	&__right
 		display: table-cell
 	&__left
-		padding: 0 10% 16px 0
+		padding: 0 16px 16px 0
 		width: 53.6%
 	&__right
 		width: 46.4%
 		vertical-align: bottom
+		+lg
+			display: none
 	&__title
+		max-width: 495px
+		+lg
+			max-width: 795px
+			br
+				display: none
 	&__info
 		margin-top: 6px
 	&__btn
@@ -43,11 +50,25 @@
 		width: 100%
 		background-color: $black 
 .sm-banner
+	position: relative
 	padding: 51px 37px 49px 33px
 	line-height: 1
 	vertical-align: top
-	background-color: $yellow 
+	z-index: 1
 	+clr
+	&:before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		transition: transform 0.4s cubic-bezier(.8,0,.2,1)
+		background-color: $yellow  
+	+hover
+		&:before
+			transform: scale(1.1)
 	&__number
 		float: left
 		+f('rt', 60)
