@@ -294,6 +294,62 @@ body {
   bottom: 0;
 }
 
+.btn-shade {
+  position: relative;
+  padding: 0 10px;
+  font-family: "OpenSans-Extrabold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  overflow: hidden;
+  color: #000;
+  text-transform: uppercase;
+  vertical-align: top;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.no-touch .btn-shade:hover .btn-shade__bg {
+  animation: shadeAnimIn 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+.btn-shade__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  animation: shadeAnimOut 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+.btn-shade__text {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes shadeAnimIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  2% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+
+@keyframes shadeAnimOut {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .btn-arrow {
   position: relative;
   margin-left: -34px;
@@ -308,10 +364,7 @@ body {
   top: 50%;
   left: 50%;
   margin: -8px 0 0 -4px;
-  animation-name: arrowAnim;
-  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
+  animation: arrowAnim 5s cubic-bezier(0.8, 0, 0.2, 1) infinite;
 }
 
 .btn-arrow svg:nth-child(2) {
@@ -503,8 +556,8 @@ body {
   max-width: 495px;
 }
 
-.hero__info {
-  margin-top: 6px;
+.hero__btn-shade {
+  margin: 6px 0 0 -10px;
 }
 
 .hero__btn {
@@ -513,13 +566,29 @@ body {
 
 .hero__img {
   margin: 67px 0 -192px -50px;
+  max-width: 1310px;
+  width: 100vw;
 }
 
-.info {
-  font-family: "OpenSans-Extrabold", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 12px;
-  text-transform: uppercase;
+.img {
+  overflow: hidden;
+  transition: transform .5s ease-in-out;
+}
+
+.no-touch .img:hover {
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.no-touch .img:hover img {
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.img img {
+  max-width: 100%;
+  display: block;
+  transition: transform .5s ease-in-out;
 }
 
 .proggres-slider {
@@ -552,7 +621,9 @@ body {
   padding: 51px 37px 49px 33px;
   line-height: 1;
   vertical-align: top;
+  color: #000;
   z-index: 1;
+  display: block;
 }
 
 .sm-banner:after {
@@ -569,7 +640,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-  transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1);
+  transition: transform 0.4s ease-in-out;
   background-color: #ffb82b;
 }
 
