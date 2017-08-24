@@ -1,4 +1,5 @@
 .hero
+	padding: 87px 0 0
 	&__inner
 	&__wrap
 		display: table
@@ -8,22 +9,43 @@
 	&__right
 		display: table-cell
 	&__left
-		padding-right: 10%
+		padding: 0 10% 16px 0
 		width: 53.6%
 	&__right
 		width: 46.4%
 		vertical-align: bottom
 	&__title
 	&__info
-		margin-top: 20px
+		margin-top: 6px
+	&__btn
+		margin-top: 8px
+	&__img
+		margin: 67px 0 0 -50px
 .info
+	+f('oeb', 12)
+	text-transform: uppercase
 .proggres-slider
+	display: inline-block
 	&__slide
 		&:not(:first-child)
 			display: none
+	&__bar
+		position: relative
+		margin-top: 24px
+		height: 1px
+		overflow: hidden
+		background-color: rgba($black, 0.12) 
+	&__bar-in
+		position: absolute
+		top: 0
+		left: -65%
+		height: 1px
+		width: 100%
+		background-color: $black 
 .sm-banner
-	padding: 40px 35px
+	padding: 51px 37px 49px 33px
 	line-height: 1
+	vertical-align: top
 	background-color: $yellow 
 	+clr
 	&__number
@@ -32,5 +54,6 @@
 	&__wrap
 		float: left
 		margin-top: 4px
-		padding-left: 10px
+		padding-left: 5px
+		line-height: 1.1
 		+f('ob', 24)
