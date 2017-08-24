@@ -23,7 +23,25 @@
 			&:not(:last-child)
 				margin-right: 14px
 		a
+			position: relative
 			color: $black 
+			display: block
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				top: 100%
+				left: 0
+				right: 0
+				height: 2px
+				background-color: $black
+				transform: scaleX(0)
+				transition: transform .25s ease-in
+				transform-origin: right center
+			+hover
+				&:after
+					transform: scale(1)
+					transform-origin: left center
 
 .logo
 	img

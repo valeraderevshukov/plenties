@@ -18,8 +18,10 @@
 			] %}
 			{% for text in texts %}
 				<div class="information__col col col_lg-33 col_md-100">
-					<h3 class="information__title title-sm">{{ text.title }}</h3>
-					<p>{{ text.text }}.</p>
+					<div class="information__item">
+						<h3 class="information__title title-sm title-sm_yellow-border">{{ text.title }}</h3>
+						<p>{{ text.text }}.</p>
+					</div>
 				</div>
 			{% endfor %}
 		</div>

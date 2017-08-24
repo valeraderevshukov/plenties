@@ -154,6 +154,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 2;
+  letter-spacing: 0.03em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -219,6 +220,11 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.title-sm_yellow-border {
+  padding-bottom: 13px;
+  border-bottom: 2px solid #ffb82b;
 }
 
 .input {
@@ -368,7 +374,32 @@ body {
 }
 
 .header__list a {
+  position: relative;
   color: #000;
+  display: block;
+}
+
+.header__list a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: transform .25s ease-in;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.no-touch .header__list a:hover:after {
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -ms-transform-origin: left center;
+  transform-origin: left center;
 }
 
 .logo img {
@@ -445,7 +476,7 @@ body {
 }
 
 .hero {
-  padding: 87px 0 0;
+  padding: 87px 0;
 }
 
 .hero__wrap {
@@ -477,7 +508,7 @@ body {
 }
 
 .hero__img {
-  margin: 67px 0 0 -50px;
+  margin: 67px 0 -192px -50px;
 }
 
 .info {
@@ -540,6 +571,23 @@ body {
   font-family: "OpenSans-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 24px;
+}
+
+.information {
+  padding: 289px 0 223px;
+  color: #fff;
+  background-color: #232323;
+}
+
+.information__item {
+  padding: 30px 11px 30px 10px;
+  margin: 0 auto;
+  max-width: 290px;
+}
+
+.information__title {
+  margin-bottom: 9px;
+  letter-spacing: -0.01em;
 }
 
 .reviews {
