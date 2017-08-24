@@ -27,13 +27,13 @@
 					<div class="proggres-slider__wrap">
 						{% for data in proggresSlider %}
 							<div class="proggres-slider__slide">
-								<div class="sm-banner">
+								<a href="#" class="sm-banner">
 									<div class="sm-banner__number">{{data.numb}}</div>
 									<div class="sm-banner__wrap">
 										<div class="sm-banner__retail">{{ data.retail }}</div>
 										<div class="sm-banner__save">{{ data.save }}</div>
 									</div>
-								</div>
+								</a>
 							</div>
 						{% endfor %}
 					</div>
@@ -43,7 +43,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="hero__info info">CONTINUE TO SHOP</div>
+		<div class="hero__btn-shade">
+			<a href="#" class="btn-shade">
+				<span class="btn-shade__bg"></span>
+				<span class="btn-shade__text">CONTINUE TO SHOP</span>
+			</a>
+		</div>
 		<button class="hero__btn btn-arrow">
 			<svg data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="7" height="17" viewBox="0 0 7 17">
 			    <title>
@@ -58,8 +63,8 @@
 			    <path d="M.06 13l3.27 3.9a.21.21 0 0 0 .18.06.21.21 0 0 0 .18-.06L7 13a.43.43 0 0 0 0-.38.16.16 0 0 0-.29 0l-2.97 3.5V.25A.26.26 0 0 0 3.51 0a.26.26 0 0 0-.23.25v15.87L.35 12.66a.21.21 0 0 0-.18-.06.21.21 0 0 0-.18.06.85.85 0 0 0 .07.34z"/>
 			</svg>
 		</button>
-		<div class="hero__img">
-			<img src="https://placecage.com/1310/720" alt="img">
+		<div class="hero__img img">
+			<img src="./img/hero-img.jpg" alt="img">
 		</div>
 	</div>
 </div>

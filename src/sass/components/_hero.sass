@@ -1,5 +1,5 @@
 .hero
-	padding: 87px 0 0
+	padding: 87px 0
 	&__inner
 	&__wrap
 		display: table
@@ -9,21 +9,39 @@
 	&__right
 		display: table-cell
 	&__left
-		padding: 0 10% 16px 0
+		padding: 0 16px 16px 0
 		width: 53.6%
 	&__right
 		width: 46.4%
 		vertical-align: bottom
+		+lg
+			display: none
 	&__title
-	&__info
-		margin-top: 6px
+		max-width: 495px
+		+lg
+			max-width: 795px
+			br
+				display: none
+	&__btn-shade
+		margin: 6px 0 0 -10px
 	&__btn
 		margin-top: 8px
 	&__img
-		margin: 67px 0 0 -50px
-.info
-	+f('oeb', 12)
-	text-transform: uppercase
+		margin: 67px 0 -192px -50px
+		max-width: 1310px
+		width: 100vw
+.img
+	overflow: hidden
+	transition: transform .5s ease-in-out
+	+hover
+		transform: scale(.95)
+		img
+			transform: scale(1.15)
+	img
+		max-width: 100%
+		display: block
+		transition: transform .5s ease-in-out
+
 .proggres-slider
 	display: inline-block
 	&__slide
@@ -43,11 +61,27 @@
 		width: 100%
 		background-color: $black 
 .sm-banner
+	position: relative
 	padding: 51px 37px 49px 33px
 	line-height: 1
 	vertical-align: top
-	background-color: $yellow 
+	color: $black 
+	z-index: 1
+	display: block
 	+clr
+	&:before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		transition: transform 0.4s ease-in-out
+		background-color: $yellow  
+	+hover
+		&:before
+			transform: scale(1.1)
 	&__number
 		float: left
 		+f('rt', 60)
