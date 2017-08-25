@@ -19,19 +19,33 @@
 				texts: ["SHOP", "ABOUT", "HELP", "SIGN IN"]
 			},
 			{
+				class: "sm-show",
+				texts: ["FAVORITES", "profile"]
+			},
+			{
 				title: "Language",
 				texts: ["DANSK", "ENGLISH"]
 			},
 			{
+				class: "menu__col_follow",
 				style: "followUs",
 				title: "Follow  Us",
 				texts: ["instagram", "facebook", "snapchat"]
 			}
 		] %}
 		<ul class="header__list">
-			<li><a href="#">SIGN IN</a></li>
-			<li><a href="#">FAVORITES</a></li>
-			<li><a href="#">CART (0)</a></li>
+			<li><a href="#">
+				<span>SIGN IN</span>
+				{{ mixins.icon('user') }}
+			</a></li>
+			<li><a href="#">
+				<span>FAVORITES</span>
+				{{ mixins.icon('favorites') }}
+			</a></li>
+			<li><a href="#">
+				<span>CART (0)</span>
+				{{ mixins.icon('cart') }}
+			</a></li>
 		</ul>
 	</div>
 	<!-- menu -->
@@ -42,7 +56,7 @@
 			</a>
 			<div class="menu__wrap">
 				{% for data in menuData %}
-					<div class="menu__col">
+					<div class="menu__col {% if data.class %}{{ data.class }}{% endif %}">
 						<div class="menu__title">{{ data.title }}</div>
 						<ul class="menu__list menu__list_{% if data.style %}{{ data.style }}{% endif %}">
 							{% for text in data.texts %}

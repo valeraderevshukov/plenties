@@ -4,3 +4,30 @@ body
 	line-height: (28/14)
 	letter-spacing: 0.03em 
 	+font-smoothing
+
+.pull-left
+	float: left
+.pull-right
+	float: right
+
+.clear
+	+clr
+
+.title-lg
+	+f('rt',80,88)
+	+md
+		+f('rt',60,68)
+	+sm
+		+f('rt',40,48)
+
+.title-sm
+	+f(oeb,16,24,40)
+	text-transform: uppercase
+	&_yellow-border
+		padding-bottom: 13px
+		border-bottom: 2px solid $yellow
+		
+.sm-show
+	display: none
+	+sm
+		display: block
