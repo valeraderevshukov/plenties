@@ -53,7 +53,6 @@
 
 .navigation
 	+f('rb')
-	&__list
 	&__item
 		&:not(:last-child)
 			margin-bottom: 32px
@@ -61,6 +60,9 @@
 		font-size: 12px
 		letter-spacing: 0.05em
 		text-transform: uppercase
+		transition: color .3s ease-in-out
 		color: $lightGrayText
+		+hover
+			color: $black 
 		&.is-active
 			color: $black 

@@ -787,7 +787,12 @@ body {
   font-size: 12px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  transition: color .3s ease-in-out;
   color: #9f9f9f;
+}
+
+.no-touch .navigation__link:hover {
+  color: #000;
 }
 
 .navigation__link.is-active {
