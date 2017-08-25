@@ -177,6 +177,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.title-lg {
+  font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 1.1;
+}
+
+.title-sm {
+  font-family: "OpenSans-Extrabold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title-sm_yellow-border {
+  padding-bottom: 13px;
+  border-bottom: 2px solid #ffb82b;
+}
+
+.sm-show {
+  display: none;
+}
+
 .out {
   position: relative;
   overflow: hidden;
@@ -217,41 +256,6 @@ body {
   content: " ";
   display: table;
   clear: both;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
-}
-
-.clear:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.title-lg {
-  font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 80px;
-  line-height: 1.1;
-}
-
-.title-sm {
-  font-family: "OpenSans-Extrabold", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.title-sm_yellow-border {
-  padding-bottom: 13px;
-  border-bottom: 2px solid #ffb82b;
 }
 
 .input {
@@ -504,8 +508,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
   background-color: #fff;
 }
 
@@ -1298,19 +1300,19 @@ body {
 
 @media only screen and (max-width: 1023px) {
 
+  .title-lg {
+    font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 1.13333;
+  }
+
   .col_md-100 {
     width: 100%;
   }
 
   .inner {
     padding: 0 50px;
-  }
-
-  .title-lg {
-    font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 1.13333;
   }
 
   .header__list {
@@ -1424,19 +1426,23 @@ body {
 
 @media only screen and (max-width: 767px) {
 
+  .title-lg {
+    font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .sm-show {
+    display: block;
+  }
+
   .col_sm-100 {
     width: 100%;
   }
 
   .inner {
     padding: 0 30px;
-  }
-
-  .title-lg {
-    font-family: "Roboto-Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 1.2;
   }
 
   .header__list .icon {

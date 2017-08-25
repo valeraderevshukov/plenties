@@ -19,7 +19,7 @@
 				texts: ["SHOP", "ABOUT", "HELP", "SIGN IN"]
 			},
 			{
-				class: "Language",
+				class: "sm-show",
 				texts: ["FAVORITES", "profile"]
 			},
 			{
@@ -55,7 +55,7 @@
 			</a>
 			<div class="menu__wrap">
 				{% for data in menuData %}
-					<div class="menu__col">
+					<div class="menu__col {% if data.class %}{{ data.class }}{% endif %}">
 						<div class="menu__title">{{ data.title }}</div>
 						<ul class="menu__list menu__list_{% if data.style %}{{ data.style }}{% endif %}">
 							{% for text in data.texts %}
