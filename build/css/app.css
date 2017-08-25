@@ -933,6 +933,17 @@ body {
   max-width: 290px;
 }
 
+[data-show-onscroll] .review {
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: transform 1s ease-out 0.2s, opacity 1s ease-out 0.2s;
+}
+
+[data-show-onscroll].is-active .review {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 .review__img {
   margin-bottom: 20px;
   border-radius: 50%;
@@ -1279,6 +1290,27 @@ body {
 .footer__social .icon {
   fill: currentColor;
   font-size: 32px;
+}
+
+[data-show-img*="parent"] {
+  overflow: hidden;
+  transform: translate3d(-100%, 0, 0);
+}
+
+[data-show-img*="parent"].is-active {
+  transform: translate3d(0, 0, 0);
+}
+
+[data-show-img*="parent"].is-active [data-show-img*="children"] {
+  transform: translate3d(0, 0, 0);
+}
+
+[data-show-img*="children"] {
+  transform: translate3d(100%, 0, 0);
+}
+
+[data-show-img] {
+  transition: transform 1s cubic-bezier(0.8, 0, 0.2, 1);
 }
 
 @media only screen and (max-width: 1279px) {
