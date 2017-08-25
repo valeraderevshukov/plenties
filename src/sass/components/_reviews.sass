@@ -18,6 +18,13 @@
 	padding: 30px 10px
 	margin: 0 auto
 	max-width: 290px
+	[data-show-onscroll] &
+		opacity: 0
+		transform: translate3d(-50px,0,0)
+		transition: transform 1s ease-out 0.2s, opacity 1s ease-out 0.2s
+	[data-show-onscroll].is-active &
+		opacity: 1
+		+gpu
 	+md
 		padding: 50px 0
 		// max-width: 100%
