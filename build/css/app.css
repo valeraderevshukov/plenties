@@ -130,7 +130,19 @@ html {
   fill: currentColor;
 }
 
+.icon-cart {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
 .icon-facebook {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.icon-favorites {
   width: 1em;
   height: 1em;
   fill: currentColor;
@@ -143,6 +155,12 @@ html {
 }
 
 .icon-snapchat {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.icon-user {
   width: 1em;
   height: 1em;
   fill: currentColor;
@@ -440,6 +458,7 @@ body {
   position: relative;
   color: #000;
   letter-spacing: initial;
+  transition: color .3s ease-in-out;
   display: block;
 }
 
@@ -464,6 +483,16 @@ body {
   transform: scale(1);
   -ms-transform-origin: left center;
   transform-origin: left center;
+}
+
+.header__list .icon {
+  font-size: 20px;
+  vertical-align: middle;
+  display: none;
+}
+
+.header__list .icon-user {
+  font-size: 19px;
 }
 
 .logo img {
@@ -1227,6 +1256,27 @@ body {
     line-height: 1.13333;
   }
 
+  .header__list {
+    margin-top: 28px;
+  }
+
+  .header__list a {
+    font-size: 0;
+  }
+
+  .no-touch .header__list a:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .no-touch .header__list a:hover:after {
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  .header__list .icon {
+    display: block;
+  }
+
   .information {
     padding: 150px 0;
   }
@@ -1325,6 +1375,14 @@ body {
     font-weight: normal;
     font-size: 40px;
     line-height: 1.2;
+  }
+
+  .header__list .icon {
+    display: none;
+  }
+
+  .header__list .icon-cart {
+    display: block;
   }
 
   .information {

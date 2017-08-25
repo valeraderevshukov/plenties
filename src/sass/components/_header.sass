@@ -17,6 +17,8 @@
 		margin-top: 26px
 		+f('oeb', 12)
 		text-transform: uppercase
+		+md
+			margin-top: 28px 
 		li
 			vertical-align: top
 			display: inline-block
@@ -26,7 +28,10 @@
 			position: relative
 			color: $black 
 			letter-spacing: initial 
+			transition: color .3s ease-in-out
 			display: block
+			+md
+				font-size: 0
 			&:after
 				content: ""
 				display: block
@@ -43,6 +48,23 @@
 				&:after
 					transform: scale(1)
 					transform-origin: left center
+				+md
+					color: rgba($black, 0.6) 
+					&:after
+						transform: scale(0)
+		.icon
+			font-size: 20px
+			vertical-align: middle 
+			display: none
+			+md
+				display: block
+			+sm
+				display: none
+		.icon-user
+			font-size: 19px
+		.icon-cart
+			+sm
+				display: block
 
 .logo
 	img

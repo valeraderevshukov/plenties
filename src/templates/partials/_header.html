@@ -19,6 +19,10 @@
 				texts: ["SHOP", "ABOUT", "HELP", "SIGN IN"]
 			},
 			{
+				class: "Language",
+				texts: ["FAVORITES", "profile"]
+			},
+			{
 				title: "Language",
 				texts: ["DANSK", "ENGLISH"]
 			},
@@ -29,9 +33,18 @@
 			}
 		] %}
 		<ul class="header__list">
-			<li><a href="#">SIGN IN</a></li>
-			<li><a href="#">FAVORITES</a></li>
-			<li><a href="#">CART (0)</a></li>
+			<li><a href="#">
+				<span>SIGN IN</span>
+				{{ mixins.icon('user') }}
+			</a></li>
+			<li><a href="#">
+				<span>FAVORITES</span>
+				{{ mixins.icon('favorites') }}
+			</a></li>
+			<li><a href="#">
+				<span>CART (0)</span>
+				{{ mixins.icon('cart') }}
+			</a></li>
 		</ul>
 	</div>
 	<!-- menu -->
