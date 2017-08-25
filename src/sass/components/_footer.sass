@@ -21,6 +21,7 @@
 		background: $lightGray
 	&__row
 		margin: 0 -15px
+		+clr
 	&__col
 		float: left
 		padding: 0 15px
@@ -32,7 +33,7 @@
 		// 	+sm
 		// 		background: $lightGray
 	&__nav
-		margin-bottom: 90px
+		margin: 0 -25px 90px 0
 		+clr
 		+sm
 			margin-bottom: 50px
@@ -41,6 +42,7 @@
 		float: left
 		width: 50%
 	&__logo
+		padding: 4px 12px 0
 		a
 			display: inline-block
 			vertical-align: top
@@ -57,21 +59,24 @@
 		vertical-align: top
 		color: $black
 		+f(rt,12,32,40)
+		transition: opacity 0.15s ease-in-out
 		+hover
-			&:before
-				opacity: 1
-		&:before
-			content: ''
-			position: absolute
-			left: 0
-			right: 0
-			bottom: 5px
-			border-bottom: 1px solid currentColor
-			opacity: 0
-			transition: opacity 0.15s ease-in
+			opacity: 0.6
+		// 	&:before
+		// 		opacity: 1
+		// &:before
+		// 	content: ''
+		// 	position: absolute
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 5px
+		// 	border-bottom: 1px solid currentColor
+		// 	opacity: 0
+		// 	transition: opacity 0.15s ease-in
 	&__description
+		padding-left: 90px
 		margin: 0 auto
-		max-width: 240px
+		max-width: 320px
 		color: $text
 		+f(rt,14,32,40)
 		text-align: center
@@ -80,16 +85,22 @@
 		p
 			margin-bottom: 33px
 	&__social
+		padding: 3px 0 0 93px
 		color: $black
 		font-size: 0
 		text-align: center
+		+sm 
+			padding: 0
 		li,
 		a
 			display: inline-block
 			vertical-align: top
 		a
-			padding: 7px 9px
+			padding: 7px 8px
 			color: $black
+			transition: opacity 0.15s ease-in-out
+			+hover
+				opacity: 0.6
 		.icon
 			fill: currentColor
 			font-size: 32px
