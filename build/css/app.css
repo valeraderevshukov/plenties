@@ -182,10 +182,6 @@ body {
   width: 50%;
 }
 
-.col_md-100 {
-  width: 50%;
-}
-
 .inner {
   position: relative;
   z-index: 10;
