@@ -417,6 +417,10 @@ body {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-bottom: 29px;
 }
 
@@ -573,7 +577,7 @@ body {
 }
 
 .hero {
-  padding: 87px 0 98px;
+  padding: 166px 0 98px;
   background-color: #f8f8f8;
 }
 
