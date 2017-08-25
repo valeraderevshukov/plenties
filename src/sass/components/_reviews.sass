@@ -1,5 +1,5 @@
 .reviews
-	padding: 317px 0 387px
+	padding: 307px 0 382px
 	background: #f8f8f8
 	+md
 		padding: 100px 0 170px
@@ -19,16 +19,23 @@
 	margin: 0 auto
 	max-width: 290px
 	+md
-		max-width: 100%
+		padding: 50px 0
+		// max-width: 100%
+		max-width: 60%
+	+sm
 		padding: 30px 0
+		max-width: 100%
 	&__img
 		margin-bottom: 20px
 		border-radius: 50%
 		width: 60px
 		height: 60px
 	&__meta
+		margin-top: 3px
 		color: #b9b9b9
 		+f(rt,12,24,40)
 	&__text
 		padding-top: 20px
-		+f(rt,14,32,40)
+		+f(rt,14)
+		line-height: 2.29
+		letter-spacing: 0.042em
