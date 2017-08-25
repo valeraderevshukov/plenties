@@ -1,0 +1,90 @@
+.features
+	padding: 325px 0 183px
+	+md
+		padding: 170px 0 40px
+	+sm
+		padding: 120px 0 0
+	&__switcher
+		position: relative
+		float: left
+		margin-top: 167px 
+		padding-left: 36px
+		width: 47.17%
+		height: 338px
+		+vertical
+		text-align: left
+		+md
+			margin-top: 80px
+		+xs
+			float: none
+			display: none
+	&__content
+		float: right
+		width: 52.83%
+		+xs
+			float: none
+			width: 100%
+	&__navigation
+		vertical-align: middle
+		display: inline-block
+	&__item
+		&:not(:first-child)
+			margin-top: 320px
+			+md
+				margin-top: 160px
+			+md
+				margin-top: 100px
+	&__title
+		max-width: 235px
+		letter-spacing: -0.01em
+	&__text
+		max-width: 347px
+		&:not(:first-child)
+			margin-top: 22px
+	&__img
+		max-width: 440px
+		&:not(:first-child)
+			margin-top: 100px
+			+md
+				margin-top: 80px
+			+sm
+				margin-top: 60px
+				max-width: 100%
+	.features__navigation-bar
+		position: absolute
+		top: 0
+		left: 0
+	img
+		max-width: 100%
+
+
+.navigation-bar
+	position: relative
+	width: 1px
+	height: 338px
+	overflow: hidden
+	background-color: rgba($black, .12)
+	&__in
+		position: absolute
+		top: -100%
+		left: 0
+		width: 100%
+		height: 100%
+		transform: translateY(30%)
+		background-color: $black 
+
+.navigation
+	+f('rb')
+	&__item
+		&:not(:last-child)
+			margin-bottom: 32px
+	&__link
+		font-size: 12px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		transition: color .3s ease-in-out
+		color: $lightGrayText
+		+hover
+			color: $black 
+		&.is-active
+			color: $black 
