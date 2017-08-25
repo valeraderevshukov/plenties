@@ -1,0 +1,66 @@
+.features
+	padding: 320px 0 183px
+	&__switcher
+		position: relative
+		float: left
+		margin-top: 172px 
+		padding-left: 36px
+		width: 47.17%
+		height: 338px
+		+vertical
+		text-align: left
+	&__content
+		float: right
+		width: 52.83%
+	&__navigation
+		vertical-align: middle
+		display: inline-block
+	&__item
+		&:not(:first-child)
+			margin-top: 320px
+	&__title
+		max-width: 235px
+	&__text
+		max-width: 347px
+		&:not(:first-child)
+			margin-top: 28px
+	&__img
+		max-width: 440px
+		&:not(:first-child)
+			margin-top: 100px
+	.features__navigation-bar
+		position: absolute
+		top: 0
+		left: 0
+	img
+		max-width: 100%
+
+
+.navigation-bar
+	position: relative
+	width: 1px
+	height: 338px
+	overflow: hidden
+	background-color: rgba($black, .12)
+	&__in
+		position: absolute
+		top: -100%
+		left: 0
+		width: 100%
+		height: 100%
+		transform: translateY(30%)
+		background-color: $black 
+
+.navigation
+	+f('rb')
+	&__list
+	&__item
+		&:not(:last-child)
+			margin-bottom: 32px
+	&__link
+		font-size: 12px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: $lightGrayText
+		&.is-active
+			color: $black 

@@ -574,19 +574,19 @@ body {
   width: 100vw;
 }
 
-.img {
-  overflow: hidden;
-  transition: transform .5s ease-in-out;
-}
-
-.no-touch .img:hover {
+.no-touch .img:hover .img__inner {
   -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
 
-.no-touch .img:hover img {
+.no-touch .img:hover .img__inner img {
   -ms-transform: scale(1.15);
   transform: scale(1.15);
+}
+
+.img__inner {
+  overflow: hidden;
+  transition: transform .5s ease-in-out;
 }
 
 .img img {
@@ -685,6 +685,113 @@ body {
 .information__title {
   margin-bottom: 9px;
   letter-spacing: -0.01em;
+}
+
+.features {
+  padding: 320px 0 183px;
+}
+
+.features__switcher {
+  position: relative;
+  float: left;
+  margin-top: 172px;
+  padding-left: 36px;
+  width: 47.17%;
+  height: 338px;
+  text-align: center;
+  font-size: 0;
+  text-align: left;
+}
+
+.features__switcher:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.features__content {
+  float: right;
+  width: 52.83%;
+}
+
+.features__navigation {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.features__item:not(:first-child) {
+  margin-top: 320px;
+}
+
+.features__title {
+  max-width: 235px;
+}
+
+.features__text {
+  max-width: 347px;
+}
+
+.features__text:not(:first-child) {
+  margin-top: 28px;
+}
+
+.features__img {
+  max-width: 440px;
+}
+
+.features__img:not(:first-child) {
+  margin-top: 100px;
+}
+
+.features .features__navigation-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.features img {
+  max-width: 100%;
+}
+
+.navigation-bar {
+  position: relative;
+  width: 1px;
+  height: 338px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.navigation-bar__in {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+  background-color: #000;
+}
+
+.navigation {
+  font-family: "Roboto-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.navigation__link {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9f9f9f;
+}
+
+.navigation__link.is-active {
+  color: #000;
 }
 
 .departments {
