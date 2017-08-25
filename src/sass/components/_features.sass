@@ -1,5 +1,9 @@
 .features
 	padding: 325px 0 183px
+	+md
+		padding: 170px 0 40px
+	+sm
+		padding: 120px 0 0
 	&__switcher
 		position: relative
 		float: left
@@ -9,15 +13,27 @@
 		height: 338px
 		+vertical
 		text-align: left
+		+md
+			margin-top: 80px
+		+xs
+			float: none
+			display: none
 	&__content
 		float: right
 		width: 52.83%
+		+xs
+			float: none
+			width: 100%
 	&__navigation
 		vertical-align: middle
 		display: inline-block
 	&__item
 		&:not(:first-child)
 			margin-top: 320px
+			+md
+				margin-top: 160px
+			+md
+				margin-top: 100px
 	&__title
 		max-width: 235px
 		letter-spacing: -0.01em
@@ -29,6 +45,11 @@
 		max-width: 440px
 		&:not(:first-child)
 			margin-top: 100px
+			+md
+				margin-top: 80px
+			+sm
+				margin-top: 60px
+				max-width: 100%
 	.features__navigation-bar
 		position: absolute
 		top: 0
