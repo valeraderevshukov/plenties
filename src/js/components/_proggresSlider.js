@@ -3,9 +3,10 @@ import { ACTIVE } from '../_constants';
 ;(function() {
   let slider = $('.js-proggres-slider');
   let index = 0;
-  let delay = 2500;
+  let delay = 5000;
   let interval;
-  let autoPlay = (elements) => {
+
+  let autoPlay = (parent, elements) => {
   	$(elements[0]).addClass(ACTIVE);
     interval = setInterval(function() {
 
@@ -15,14 +16,18 @@ import { ACTIVE } from '../_constants';
       (index === elements.length-1 )
       	? index = 0
       	: index++;
-			
+	  parent.addClass(ACTIVE);
+	  setTimeout(function() {
+        parent.removeClass(ACTIVE);
+	  }, 1000 );
     }, delay );
+  	
   };
-	
+
   slider.each(function(i, el) {
-    let that = $(this);
-    let slide = that.find('.js-proggres-slide');
-    autoPlay($(slide));
+    let thatSlider = $(this);
+    let slide = thatSlider.find('.js-proggres-slide');
+    autoPlay(thatSlider, $(slide));
   });
 
 })();

@@ -28,16 +28,18 @@
 						{% for data in proggresSlider %}
 							<div class="proggres-slider__slide js-proggres-slide">
 								<a href="#" class="sm-banner">
-									<div class="sm-banner__number">{{data.numb}}</div>
-									<div class="sm-banner__wrap">
-										<div class="sm-banner__retail">{{ data.retail }}</div>
-										<div class="sm-banner__save">{{ data.save }}</div>
+									<div class="sm-banner__in">
+										<div class="sm-banner__number">{{data.numb}}</div>
+										<div class="sm-banner__wrap">
+											<div class="sm-banner__retail">{{ data.retail }}</div>
+											<div class="sm-banner__save">{{ data.save }}</div>
+										</div>
 									</div>
 								</a>
 							</div>
 						{% endfor %}
 					</div>
-					<div class="proggres-slider__bar">
+					<div class="proggres-slider__bar js-proggres-slider-bar">
 						<div class="proggres-slider__bar-in"></div>
 					</div>
 				</div>
