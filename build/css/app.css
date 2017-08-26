@@ -1028,7 +1028,7 @@ body {
   transform: scale(0.97);
 }
 
-.no-touch .box:hover .box__image-frame {
+.no-touch .box:hover .box__image-picture {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -1043,9 +1043,6 @@ body {
   overflow: hidden;
   padding-bottom: 106%;
   height: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   -ms-transform: scale(1.5);
   transform: scale(1.5);
   transition: transform 1s;
@@ -1053,24 +1050,18 @@ body {
 
 .box__image-frame {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -100px;
+}
+
+.box__image-picture {
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  text-align: center;
-  font-size: 0;
   transition: transform 1s;
-}
-
-.box__image-frame:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 0;
-  height: 100%;
 }
 
 .box__content {
