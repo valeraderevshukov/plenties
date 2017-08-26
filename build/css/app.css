@@ -416,6 +416,7 @@ body {
   height: 80px;
   overflow: hidden;
   background-color: transparent;
+  display: inline-block;
 }
 
 .btn-arrow svg {

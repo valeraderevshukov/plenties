@@ -1,4 +1,4 @@
-import { $DOCUMENT, $BODY, NOTOUCH, detectTouch } from './_constants';
+import { $DOCUMENT, $BODY, NOTOUCH, detectTouch, SCROLL_TO } from './_constants';
 
 export default (function() {
 
@@ -6,6 +6,13 @@ export default (function() {
 
     !detectTouch() && $BODY.addClass(NOTOUCH);
 
+  });
+
+  const SCROLL_LINK = $('.js-scroll-to');
+  SCROLL_LINK.on('click', function() {
+    let thisAttr = $(this).attr('href');
+    let position = $(thisAttr).offset().top;
+    SCROLL_TO(position);
   });
 
 })();
