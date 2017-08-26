@@ -14,3 +14,9 @@ export const $HEADER = $('.js-header');
 
 //utils
 export const detectTouch = () => 'ontouchstart' in window;
+
+export const SCROLL_TO = position => {
+  $BODY.animate({
+    scrollTop: position
+  }, 700);
+};
