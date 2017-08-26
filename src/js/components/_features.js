@@ -38,7 +38,7 @@ export default (function() {
         $nav
           .removeAttr('style')
           .addClass(FIXED);
-        progress = winOffsetCenter*(endPoint/100);
+        progress = ( winOffsetCenter - featuresOffsetTop - navHeight/2 ) / ( (featuresHeight - navHeight) / 100 );
       } else if (!fixedPoint) {
         $nav
           .removeAttr('style')
@@ -51,10 +51,10 @@ export default (function() {
             'position': 'absolute',
             'top': `${featuresHeight - navHeight}px`
           });
-        progress = 100;
       }
-      console.log(progress);
-      $bar.css('transform', `translateY(${progress - 100}%)`);
+      
+      progress = progress >= 100 ? 100 : progress;
+      $bar.css('transform', `translateY(${progress}%)`);
 
     });
 
