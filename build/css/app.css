@@ -982,17 +982,48 @@ body {
   margin-bottom: 18px;
 }
 
+.box {
+  display: block;
+  color: #000;
+  transform: translate3d(0, 50px, 0);
+  transition: transform 1s, opacity 1.1s ease 167ms;
+}
+
+.box.is-active {
+  transform: translate3d(0, 0, 0);
+}
+
+.box.is-active .box__image-in {
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.no-touch .box:hover .box__image-in {
+  -ms-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+.no-touch .box:hover .box__image-frame {
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .box__image {
+  overflow: hidden;
   margin-bottom: 42px;
 }
 
 .box__image-in {
   position: relative;
+  overflow: hidden;
   padding-bottom: 106%;
   height: 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  transition: transform 1s;
 }
 
 .box__image-frame {
@@ -1001,8 +1032,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   text-align: center;
   font-size: 0;
+  transition: transform 1s;
 }
 
 .box__image-frame:before {
@@ -1011,22 +1046,6 @@ body {
   vertical-align: middle;
   width: 0;
   height: 100%;
-}
-
-.box__image-frame[data-vertical*="top"] img {
-  vertical-align: top;
-}
-
-.box__image-frame[data-vertical*="bottom"] img {
-  vertical-align: bottom;
-}
-
-.box__image-frame[data-vertical*="center"] img {
-  vertical-align: middle;
-}
-
-.box__image-frame img {
-  display: inline-block;
 }
 
 .box__content {
