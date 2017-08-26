@@ -1,5 +1,5 @@
 import { TimelineMax } from 'gsap';
-import { OPEN, $HEADER } from '../_constants';
+import { OPEN, $HEADER, $BODY } from '../_constants';
 
 ;(function() {
 	
@@ -27,14 +27,8 @@ import { OPEN, $HEADER } from '../_constants';
       y: 0,
       ease: Power4.easeOut
     }, 0 )
-    .eventCallback('onComplete', () => {
-      menuStaggerAnimation.play(0);
-    })
-    .eventCallback('onReverseComplete', () => {
-
-      TweenMax.set( menuStaggers, { clearProps: 'all' });
-
-    });
+    .eventCallback('onComplete', () => menuStaggerAnimation.play(0) )
+    .eventCallback('onReverseComplete', () => TweenMax.set( [menuStaggers, menu], { clearProps: 'all' }) );
 
   btn.on('click', function() {
     let that = $(this);
@@ -48,6 +42,13 @@ import { OPEN, $HEADER } from '../_constants';
       menuAnimation.reverse();
     }
     return false;
+  });
+
+  $BODY.on('click touchend', (e) => {
+    let target = $(e.target);
+    if ( target.closest(btn).length || target.closest(menu).length ) return;
+    btn.removeClass(OPEN);
+    menuAnimation.reverse();
   });
 	
 

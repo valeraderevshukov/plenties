@@ -370,8 +370,8 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
+  -ms-transform: translateX(103%);
+  transform: translateX(103%);
   animation: shadeAnimOut 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
 }
 
@@ -382,10 +382,10 @@ body {
 
 @keyframes shadeAnimIn {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-103%);
   }
   2% {
-    transform: translateX(-100%);
+    transform: translateX(-103%);
   }
   100% {
     transform: translateX(-40%);
@@ -397,7 +397,7 @@ body {
     transform: translateX(-40%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(103%);
   }
 }
 
@@ -587,12 +587,33 @@ body {
   text-transform: initial;
 }
 
-.menu li:not(:last-child) {
+.menu__item:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.menu a {
+.menu__link {
+  position: relative;
+  margin-left: -20px;
+  padding: 0 20px;
   color: inherit;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.no-touch .menu__link:hover .menu__link-bg {
+  animation: shadeAnimIn 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+.menu__link .menu__link-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  -ms-transform: translateX(103%);
+  transform: translateX(103%);
+  animation: shadeAnimOut 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
 }
 
 .hero {
@@ -1578,7 +1599,7 @@ body {
     font-weight: normal;
   }
 
-  .menu li:not(:last-child) {
+  .menu__item:not(:last-child) {
     margin-bottom: 8px;
   }
 

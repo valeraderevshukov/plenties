@@ -60,7 +60,12 @@
 						<div class="menu__title" data-stagger="from-top">{{ data.title }}</div>
 						<ul class="menu__list menu__list_{% if data.style %}{{ data.style }}{% endif %}">
 							{% for text in data.texts %}
-								<li data-stagger="from-top"><a href="#">{{ text }}</a></li>
+								<li class="menu__item" data-stagger="from-top">
+									<a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										{{ text }}
+									</a>
+								</li>
 							{% endfor %}
 						</ul>
 					</div>
