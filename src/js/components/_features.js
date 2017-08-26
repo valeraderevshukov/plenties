@@ -32,16 +32,18 @@ export default (function() {
       const fixedPoint = sidebarOffsetTop + sidebarHeight/2 <= winOffsetCenter;
       const endPoint = featuresOffsetBottom <= navOffsetTop + navHeight;
 
-      console.log(winOffsetCenter < featuresOffsetBottom);
+      let progress = null;
 
       if (fixedPoint && winOffsetCenter + sidebarHeight/2 < featuresOffsetBottom) {
         $nav
           .removeAttr('style')
           .addClass(FIXED);
+        progress = winOffsetCenter*(endPoint/100);
       } else if (!fixedPoint) {
         $nav
           .removeAttr('style')
           .removeClass(FIXED);
+        progress = 0;
       } else if (endPoint) {
         $nav
           .removeClass(FIXED)
@@ -49,7 +51,10 @@ export default (function() {
             'position': 'absolute',
             'top': `${featuresHeight - navHeight}px`
           });
+        progress = 100;
       }
+      console.log(progress);
+      $bar.css('transform', `translateY(${progress - 100}%)`);
 
     });
 
