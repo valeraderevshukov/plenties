@@ -1492,6 +1492,7 @@ body {
 [data-hidden-anim-parent].is-active [data-hidden-anim^="from-"] {
   -ms-transform: translateY(0);
   transform: translateY(0);
+  transition-delay: 0.3s;
 }
 
 [data-hidden-anim^="from-"] {
