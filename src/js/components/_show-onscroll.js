@@ -15,6 +15,9 @@ export default (function() {
   	    $item.addClass(ACTIVE);
   	  }
   	};
+    if ($item.offset().top + $item.outerHeight()/100 * threshold <= $WIN.scrollTop() + $WIN.outerHeight()) {
+      show();
+    };
 
     $WIN.on('scroll', show);
 

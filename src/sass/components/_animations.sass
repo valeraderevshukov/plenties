@@ -22,3 +22,16 @@
 	display: block
 [data-stagger="from-top"]
 	transform: translateY(-30px)
+	
+[data-hidden-anim-parent]
+	overflow: hidden
+	&.is-active 
+		[data-hidden-anim^="from-"]
+			transform: translateY(0)
+[data-hidden-anim^="from-"]
+	position: relative
+	transition: transform .75s ease-out
+	display: block
+	
+[data-hidden-anim="from-top"]
+	transform: translateY(-100%)
