@@ -9,7 +9,7 @@ export default (function() {
   });
 
   const SCROLL_LINK = $('.js-scroll-to');
-  SCROLL_LINK.on('click', function() {
+  SCROLL_LINK.on('click touchend', function() {
     let thisAttr = $(this).attr('href');
     let position = $(thisAttr).offset().top;
     SCROLL_TO(position);

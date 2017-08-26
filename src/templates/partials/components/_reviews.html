@@ -4,26 +4,29 @@
 	<div class="inner">
 		{% set reviews = [
 			{
+				logo: 'review-img-1',
 				title: 'EMMA Zhang',
 				meta: 'Student',
 				text: '“The shipping was amazingly fast. Order what you need, when you need it and save yourself the trips to the big-box stores. The website is easy to use and fun to browse through. Free samples is a great bonus. The whole process is cost effective and efficient. Give Plenties a try, I think you&#39;ll like it!”'
 			},
 			{
+				logo: 'review-img-2',
 				title: 'Sofie Nielsen',
 				meta: 'Graphic Designer',
 				text: '“When I first heard of Plenties I was skeptical. Before I’d never buy granola bars, or coffee filters, or paper towels  online. That’s the things I go to regular stores for. But those stores don’t always have the best prices on these kinds of things. Now I’m using Plenties for nearly everything.”'
 			},
 			{
+				logo: 'review-img-3',
 				title: 'William Olsen',
 				meta: 'Enterpreneur',
 				text: '“A good alternative. Efficient, economical, everything&#39;s excellent. If you just don&#39;t want to go to the regular stores to do your shopping, this is a great site to use. Their prices are fairly competitive and in many cases much cheaper than retail. The orders always come fast.”'
 			}
 		] %}	
-		<div class="row" data-show-onscroll="50">
+		<div class="row">
 			{% for item in reviews %}
-				<div class="col col_lg-33 col_md-100">
+				<div class="col col_lg-33 col_md-100" data-show-onscroll="50">
 					<div class="review">
-						<div class="review__img" style="background: url(https://placecage.com/50/50);"></div>
+						<div class="review__img" style="background-image: url(./img/{{item.logo}}.jpg);"></div>
 						<div class="title-sm review__title">{{item.title}}</div>
 						<div class="review__meta">{{item.meta}}</div>
 						<div class="review__text">{{item.text | safe}}</div>
