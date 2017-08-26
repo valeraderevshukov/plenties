@@ -14,10 +14,12 @@ export default (function() {
 		$features.each(function() {
 
 			const $this = $(this);
+			const sidebar = $this.find('.js-features-sidebar');
 			const $nav = $this.find('.js-features-nav');
 			const $bar = $this.find('.js-features-bar');
 
-			const offsetTop = $this.offset().top;
+			const navOffsetTop = $nav.offset().top;
+			const navHeight = $nav.outerHeight();
 
 		});
 
