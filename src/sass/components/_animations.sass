@@ -3,7 +3,9 @@
 	transform: translate3d(-100%,0,0)
 	&.is-active
 		+gpu
+		transition-delay: 0.3s
 		[data-show-img*="children"]
+			transition-delay: 0.3s
 			+gpu
 		[data-show-img*="opacity"]
 			opacity: 1
@@ -25,10 +27,13 @@
 	
 [data-hidden-anim-parent]
 	overflow: hidden
+[data-show-onscroll]
 	&.is-active 
 		[data-hidden-anim^="from-"]
 			transform: translateY(0)
 			transition-delay: 0.3s
+		.line[data-hidden-anim^="from-"]
+			transition-delay: 0s
 [data-hidden-anim^="from-"]
 	position: relative
 	transition: transform .75s ease-out
@@ -36,3 +41,9 @@
 	
 [data-hidden-anim="from-top"]
 	transform: translateY(-100%)
+[data-hidden-anim="from-bottom"]
+	transform: translateY(100%)
+[data-hidden-anim="from-left"]
+	transform: translateX(-100%)
+[data-hidden-anim="from-right"]
+	transform: translateX(100%)
