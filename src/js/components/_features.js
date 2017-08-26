@@ -4,9 +4,7 @@ export default (function() {
 
   const $features = $('.js-features');
 
-
-  $WIN.on('scroll', function(e) {
-
+  const featuresPosition = () => {
     const winHeight = $WIN.outerHeight();
     const winOffsetTop = $WIN.scrollTop();
     const winOffsetCenter = winOffsetTop + winHeight/2;
@@ -38,7 +36,7 @@ export default (function() {
         $nav
           .removeAttr('style')
           .addClass(FIXED);
-        progress = winOffsetCenter*(endPoint/100);
+        progress = ( winOffsetCenter - featuresOffsetTop - navHeight/2 ) / ( (featuresHeight - navHeight) / 100 );
       } else if (!fixedPoint) {
         $nav
           .removeAttr('style')
@@ -51,14 +49,16 @@ export default (function() {
             'position': 'absolute',
             'top': `${featuresHeight - navHeight}px`
           });
-        progress = 100;
       }
-      console.log(progress);
-      $bar.css('transform', `translateY(${progress - 100}%)`);
+
+      progress = progress >= 100 ? 100 : progress;
+      $bar.css('transform', `translateY(${progress}%)`);
 
     });
+  };
 
-  });
+  featuresPosition();
+  $WIN.on('scroll', featuresPosition);
 
 
 })();
