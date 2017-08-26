@@ -937,11 +937,8 @@ body {
 }
 
 .features__img {
-  max-width: 440px;
-}
-
-.features__img:not(:first-child) {
   margin-top: 100px;
+  max-width: 440px;
 }
 
 .features .features__navigation-bar {
@@ -1651,7 +1648,7 @@ body {
     margin-top: 100px;
   }
 
-  .features__img:not(:first-child) {
+  .features__img {
     margin-top: 80px;
   }
 
@@ -1808,7 +1805,7 @@ body {
     padding: 120px 0 0;
   }
 
-  .features__img:not(:first-child) {
+  .features__img {
     margin-top: 60px;
     max-width: 100%;
   }

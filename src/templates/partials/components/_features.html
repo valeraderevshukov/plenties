@@ -39,11 +39,19 @@
 				}
 			] %}
 			{% for data in featuresData %}
-				<div class="features__item js-features-item" id="{{data.id}}">
-					<div class="features__title title-sm">{{ data.title | safe}}</div>
-					<div class="features__text">{{ data.text }}</div>
-					<div class="features__img">
-						<img src="./img/features-img-{{ data.img }}.jpg" alt="img">
+				<div class="features__item js-features-item" id="{{data.id}}" data-show-onscroll="50">
+					<div class="features__title title-sm" data-hidden-anim-parent>
+						<span data-hidden-anim="from-left">{{ data.title | safe}}</span>
+					</div>
+					<div class="features__text" data-hidden-anim-parent>
+						<span data-hidden-anim="from-bottom">{{ data.text }}</span>
+					</div>
+					<div data-paroller-factor="0.05" data-paroller-type="foreground">
+						<div class="features__img" data-show-onscroll data-show-img="parent" >
+							<div data-show-img="children">
+								<img src="./img/features-img-{{ data.img }}.jpg" alt="img">
+							</div>
+						</div>
 					</div>
 				</div>
 			{% endfor %}
