@@ -51,35 +51,39 @@
 		transition: transform .5s ease-in-out
 
 .proggres-slider
+	position: relative
 	display: inline-block
+	&:before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		right: 0
+		bottom: 25px
+		z-index: -1
+		transition: transform 0.4s ease-in-out
+		background-color: $yellow  
+	+hover
+		&:before
+			transform: scale(1.1)
 	&__slide
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
 		height: 100%
-		// opacity: 0
-		// transition: opacity .5s ease-out
-		// &.is-active
-		// 	opacity: 1
-		// 	z-index: 1
+		&.is-active
+			.sm-banner
+				animation: proggresTextIn 0.5s ease-in-out forwards
+				transform-origin: 0 0
+	.sm-banner
+		animation: proggresTextOut 0.5s ease-in-out forwards
+		transform-origin: 0 0
 	&__wrap
 		position: relative
 		width: 506px
 		height: 160px
-		&:before
-			position: absolute
-			content: ""
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			z-index: -1
-			transition: transform 0.4s ease-in-out
-			background-color: $yellow  
-		+hover
-			&:before
-				transform: scale(1.1)
+		overflow: hidden
 	&__bar
 		position: relative
 		margin-top: 24px
@@ -92,11 +96,11 @@
 		left: 0
 		height: 1px
 		width: 100%
-		animation: proggresIn 4s linear forwards
+		animation: proggresIn 3.5s ease-in-out forwards
 		transform-origin: 100% 0
 		background-color: $black 
 		.is-active &
-			animation: proggresOut 0.5s linear forwards
+			animation: proggresOut 0.5s ease-in-out forwards
 			transform-origin: 0 0
 
 @keyframes proggresIn
@@ -110,6 +114,25 @@
 		transform: translateX(0)
 	100%
 		transform: translateX(100%)
+
+@keyframes proggresTextIn
+	0%
+		transform: translateX(-100%)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+@keyframes proggresTextOut
+	0%
+		transform: translateX(0)
+		opacity: 1
+	90%
+		transform: translateX(100%)
+		opacity: 0
+	100%
+		transform: translateX(-100%)
+		opacity: 0
 	
 .sm-banner
 	position: relative
@@ -121,17 +144,6 @@
 	overflow: hidden
 	display: block
 	+clr
-	&__in
-		position: relative
-		.proggres-slider &
-			// transform: translateX(-30px)
-			animation: proggresOut 0.5s linear forwards
-			opacity: 0
-			transition: opacity .5s ease-out, transform .5s ease-out
-		.is-active &
-			// transform: translateX(0)
-			opacity: 1
-			animation: proggresIn 0.5s linear forwards
 	&__number
 		float: left
 		+f('rt', 60)

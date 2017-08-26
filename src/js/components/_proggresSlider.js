@@ -3,7 +3,7 @@ import { ACTIVE } from '../_constants';
 ;(function() {
   let slider = $('.js-proggres-slider');
   let index = 0;
-  let delay = 5000;
+  let delay = 4000;
   let interval;
 
   let autoPlay = (parent, elements) => {
@@ -19,7 +19,7 @@ import { ACTIVE } from '../_constants';
 	  parent.addClass(ACTIVE);
 	  setTimeout(function() {
         parent.removeClass(ACTIVE);
-	  }, 1000 );
+	  }, 500 );
     }, delay );
   	
   };
