@@ -1,49 +1,28 @@
-import { $WIN } from '../_constants';
-;(function() {
-  let $features = $('.js-features');
-  $features.each(function() {
-		
-  });
-  // js-navigation-link
-  // js-features-item
+import { $WIN, ACTIVE, SCROLL_TO } from '../_constants';
 
-  $WIN.ready(function() {
-	    $WIN.on('scroll', onScroll);
-	    
-	    //smoothscroll
-	    $('.js-navigation-link').on('click', function(e) {
-	        e.preventDefault();
-	        $WIN.off('scroll');
-	        
-	        $('.js-navigation-link').each(function() {
-	            $(this).removeClass('is-active');
-	        });
-	        $(this).addClass('is-active');
-	      
-	        var target = this.hash,
-	            menu = target;
-	        $target = $(target);
-	        $('html, body').stop().animate({
-	            'scrollTop': $target.offset().top+2
-	        }, 500, 'swing', function() {
-	            window.location.hash = target;
-	            $WIN.on('scroll', onScroll);
-	        });
-	    });
-  });
+;(function() {
+
+  let $blockItem = $('.js-features-item');
+  let link = $('.js-navigation-link');
 
   function onScroll(event) {
-	    var scrollPos = $(document).scrollTop();
-	    $('.js-navigation-link').each(function() {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr('href'));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.js-navigation-link').removeClass('is-active');
-	            currLink.addClass('is-active');
-	        }
-	        else{
-	            currLink.removeClass('is-active');
-	        }
-	    });
-  }
+    var $scrollPos = $WIN.scrollTop();
+    $blockItem.each(function() {
+      let $that = $(this);
+      let id = $that.attr('id');
+      if ($that.offset().top <= $scrollPos && $that.offset().top + $that.height() > $scrollPos) {
+      	link.removeClass(ACTIVE);
+        $('[href="#'+id+'"]').addClass(ACTIVE);
+      }
+    });
+  };
+
+  link.on('click', function() {
+  	let thisAttr = $(this).attr('href');
+  	let position = $(thisAttr).offset().top;
+  	SCROLL_TO(position);
+  });
+
+  $WIN.on('scroll', onScroll);
+  
 })();
