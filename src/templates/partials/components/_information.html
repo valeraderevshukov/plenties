@@ -1,7 +1,7 @@
 <!-- information -->
 <div class="information">
 	<div class="information__inner inner">
-		<div class="information__row row">
+		<div class="information__row row" data-show-onscroll="50">
 			{% set texts = [
 				{
 					title: "Bigger Quantities",
@@ -18,9 +18,12 @@
 			] %}
 			{% for text in texts %}
 				<div class="information__col col col_lg-33 col_md-100">
-					<div class="information__item">
-						<h3 class="information__title title-sm title-sm_yellow-border">{{ text.title }}</h3>
-						<p>{{ text.text }}.</p>
+					<div class="information__item" data-show-onscroll="50">
+						<div data-hidden-anim-parent>
+							<h3 class="information__title title-sm" data-hidden-anim="from-top">{{ text.title }}</h3>
+							<hr class="line" data-hidden-anim="from-left"></hr>
+							<p data-hidden-anim="from-bottom">{{ text.text }}.</p>
+						</div>
 					</div>
 				</div>
 			{% endfor %}

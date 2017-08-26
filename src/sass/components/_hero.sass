@@ -53,19 +53,26 @@
 .proggres-slider
 	position: relative
 	display: inline-block
-	&:before
-		position: absolute
-		content: ""
-		top: 0
-		left: 0
-		right: 0
-		bottom: 25px
-		z-index: -1
-		transition: transform 0.4s ease-in-out
-		background-color: $yellow  
-	+hover
+	&.is-active
+		.proggres-slider__bar-in
+			animation: proggresOut 0.5s ease-in-out forwards
+			transform-origin: 0 0
+	&.is-init
 		&:before
-			transform: scale(1.1)
+			position: absolute
+			content: ""
+			top: 0
+			left: 0
+			right: 0
+			bottom: 25px
+			z-index: -1
+			transition: transform 0.4s ease-in-out
+			background-color: $yellow  
+		+hover
+			&:before
+				transform: scale(1.1)
+		[data-show-img="parent"]
+			overflow: visible
 	&__slide
 		position: absolute
 		top: 0
@@ -99,9 +106,6 @@
 		animation: proggresIn 3.5s ease-in-out forwards
 		transform-origin: 100% 0
 		background-color: $black 
-		.is-active &
-			animation: proggresOut 0.5s ease-in-out forwards
-			transform-origin: 0 0
 
 @keyframes proggresIn
 	0%
@@ -143,7 +147,11 @@
 	z-index: 1
 	overflow: hidden
 	display: block
+	background-color: $yellow  
 	+clr
+	.proggres-slider &
+		opacity: 0
+		transform: translateX(-100%)
 	&__number
 		float: left
 		+f('rt', 60)

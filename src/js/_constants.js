@@ -1,6 +1,7 @@
 //CLASSES
 export const OPEN = 'is-open';
 export const ACTIVE = 'is-active';
+export const INIT = 'is-init';
 export const TOUCH = 'is-touch';
 export const NOTOUCH = 'no-touch';
 

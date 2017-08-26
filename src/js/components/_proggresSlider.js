@@ -1,4 +1,4 @@
-import { ACTIVE } from '../_constants';
+import { ACTIVE, INIT } from '../_constants';
 
 ;(function() {
   let slider = $('.js-proggres-slider');
@@ -10,17 +10,20 @@ import { ACTIVE } from '../_constants';
   	$(elements[0]).addClass(ACTIVE);
     interval = setInterval(function() {
 
-      elements.removeClass(ACTIVE);
-      $(elements[index]).addClass(ACTIVE);
+	  (index === elements.length-1 )
+	  	? index = 0
+	  	: index++;
+	  elements.removeClass(ACTIVE);
+	  $(elements[index]).addClass(ACTIVE);
 
-      (index === elements.length-1 )
-      	? index = 0
-      	: index++;
 	  parent.addClass(ACTIVE);
 	  setTimeout(function() {
         parent.removeClass(ACTIVE);
 	  }, 500 );
     }, delay );
+    setTimeout(function() {
+      parent.addClass(INIT);
+    }, 1300 );
   	
   };
 

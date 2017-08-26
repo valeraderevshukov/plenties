@@ -7,40 +7,44 @@
 			</div>
 			<div class="hero__right">
 				<div class="proggres-slider js-proggres-slider">
-					{% set proggresSlider = [
-						{
-							numb: "375.00",
-							retail: "DKK VS 880.50 RETAIL",
-							save: "YOU SAVE 57%"
-						},
-						{
-							numb: "460.50",
-							retail: "DKK VS 920.00 RETAIL",
-							save: "YOU SAVE 50%"
-						},
-						{
-							numb: "125.00",
-							retail: "DKK VS 340.50 RETAIL",
-							save: "YOU SAVE 63%"
-						}
-					] %}
-					<div class="proggres-slider__wrap">
-						{% for data in proggresSlider %}
-							<div class="proggres-slider__slide js-proggres-slide">
-								<a href="#" class="sm-banner">
-									<div class="sm-banner__in">
-										<div class="sm-banner__number">{{data.numb}}</div>
-										<div class="sm-banner__wrap">
-											<div class="sm-banner__retail">{{ data.retail }}</div>
-											<div class="sm-banner__save">{{ data.save }}</div>
-										</div>
+					<div data-show-img="parent" data-show-onscroll>
+						<div data-show-img="children">
+							{% set proggresSlider = [
+								{
+									numb: "375.00",
+									retail: "DKK VS 880.50 RETAIL",
+									save: "YOU SAVE 57%"
+								},
+								{
+									numb: "460.50",
+									retail: "DKK VS 920.00 RETAIL",
+									save: "YOU SAVE 50%"
+								},
+								{
+									numb: "125.00",
+									retail: "DKK VS 340.50 RETAIL",
+									save: "YOU SAVE 63%"
+								}
+							] %}
+							<div class="proggres-slider__wrap">
+								{% for data in proggresSlider %}
+									<div class="proggres-slider__slide js-proggres-slide">
+										<a href="#" class="sm-banner">
+											<div class="sm-banner__in">
+												<div class="sm-banner__number">{{data.numb}}</div>
+												<div class="sm-banner__wrap">
+													<div class="sm-banner__retail">{{ data.retail }}</div>
+													<div class="sm-banner__save">{{ data.save }}</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</a>
+								{% endfor %}
 							</div>
-						{% endfor %}
-					</div>
-					<div class="proggres-slider__bar js-proggres-slider-bar">
-						<div class="proggres-slider__bar-in"></div>
+							<div class="proggres-slider__bar js-proggres-slider-bar">
+								<div class="proggres-slider__bar-in"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
