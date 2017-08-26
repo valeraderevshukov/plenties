@@ -683,7 +683,10 @@ body {
 }
 
 .img img {
-  max-width: 100%;
+  margin: -5%;
+  max-height: 110%;
+  max-height: 110%;
+  max-width: 110%;
   display: block;
   transition: transform .5s ease-in-out;
 }
