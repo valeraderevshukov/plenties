@@ -8,8 +8,9 @@ import { OPEN, $HEADER } from '../_constants';
 
   let duration = 0.4;
 
+  let menuStaggers = menu.find('[data-stagger]');
   let menuStaggerGroup = menu.find('[data-stagger="group"]');
-  let menuStaggerAnimation = new TimelineMax({ paused: true });
+  let menuStaggerAnimation = new TimelineMax({ paused: true }).addLabel('startStagger');
   menuStaggerGroup.each(function(i, el) {
     let that = $(this);
     let staggerItem = that.find('[data-stagger]');
@@ -17,8 +18,8 @@ import { OPEN, $HEADER } from '../_constants';
       .staggerTo( staggerItem, duration, {
         y: 0,
         opacity: 1,
-        ease: Power4.easeOut
-      }, 0.1 );
+        ease: Power2.easeOut
+      }, 0.2, 'startStagger' );
   });
 
   let menuAnimation = new TimelineMax({ paused: true })
@@ -27,7 +28,12 @@ import { OPEN, $HEADER } from '../_constants';
       ease: Power4.easeOut
     }, 0 )
     .eventCallback('onComplete', () => {
-      menuStaggerAnimation.play();
+      menuStaggerAnimation.play(0);
+    })
+    .eventCallback('onReverseComplete', () => {
+
+      TweenMax.set( menuStaggers, { clearProps: 'all' });
+
     });
 
   btn.on('click', function() {

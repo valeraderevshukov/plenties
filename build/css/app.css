@@ -1340,6 +1340,17 @@ body {
   transition: transform 1s cubic-bezier(0.8, 0, 0.2, 1), opacity 1.1s ease 167ms;
 }
 
+[data-stagger*="from-"] {
+  position: relative;
+  opacity: 0;
+  display: block;
+}
+
+[data-stagger="from-top"] {
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
 @media only screen and (max-width: 1279px) {
 
   .hero__left {
