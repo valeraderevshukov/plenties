@@ -894,11 +894,46 @@ body {
 }
 
 .box__image-in {
+  position: relative;
   padding-bottom: 106%;
   height: 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.box__image-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 0;
+}
+
+.box__image-frame:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.box__image-frame[data-vertical*="top"] img {
+  vertical-align: top;
+}
+
+.box__image-frame[data-vertical*="bottom"] img {
+  vertical-align: bottom;
+}
+
+.box__image-frame[data-vertical*="center"] img {
+  vertical-align: middle;
+}
+
+.box__image-frame img {
+  display: inline-block;
 }
 
 .box__content {

@@ -2,11 +2,30 @@
 	&__image
 		margin-bottom: 42px
 		&-in
+			position: relative
 			padding-bottom: 106%
 			height: 0
 			background-repeat: no-repeat
 			background-position: center center
 			background-size: cover
+		&-frame
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			+vertical
+			&[data-vertical*="top"]
+				img 
+					vertical-align: top
+			&[data-vertical*="bottom"]
+				img 
+					vertical-align: bottom
+			&[data-vertical*="center"]
+				img 
+					vertical-align: middle
+			img
+				display: inline-block
 	&__content
 		text-align: center
 	&__title
