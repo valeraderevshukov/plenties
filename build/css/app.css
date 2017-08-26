@@ -627,7 +627,7 @@ body { background: #fff; font-family: "Roboto-Light", Helvetica Neue, Helvetica,
 
  .review { padding: 30px 0; max-width: 100%; }
 
- .results__images { max-width: 320px; height: auto; }
+ .results__images { max-width: 320px; min-height: 550px; }
 
  .results__image { position: relative; }
 
