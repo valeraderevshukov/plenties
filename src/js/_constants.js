@@ -8,6 +8,7 @@ export const NOTOUCH = 'no-touch';
 export const $WIN = $(window);
 export const $DOCUMENT = $(document);
 export const $BODY = $('body');
+export const $HEADER = $('.js-header');
 
 //utils
 export const detectTouch = () => 'ontouchstart' in window;
