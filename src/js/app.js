@@ -6,4 +6,4 @@ window.jQuery = jQuery;
 import common from './_common';
 import showOnScroll from './components/_show-onscroll';
 import './components/_menu';
-import './components/_sm-banner';
+import './components/_proggresSlider';
