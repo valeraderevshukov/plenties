@@ -4,18 +4,22 @@
 	<div class="inner">
 		{% set departments = [
 			{
+				id: '1',
 				title: 'BATH & BODY',
 				meta: 'Soaps, shaving, shower and more'
 			},
 			{
+				id: '2',
 				title: 'GROCERY',
 				meta: 'Snacks, pasta, bars, fruit and more'
 			},
 			{
+				id: '3',
 				title: 'CLEANING',
 				meta: 'Laundry, dish soaps and more'
 			},
 			{
+				id: '4',
 				title: 'SEE ALL DEPARTMENTS',
 				meta: 'Beverages, pet food and more'
 			}
@@ -23,19 +27,17 @@
 		<div class="row">
 			{% for item in departments %}
 				<div class="col col_lg-50 col_sm-100">
-					<div class="box departments__box">
-						<div class="box__image" data-show-img="parent" data-show-onscroll="50">
-							<div class="box__image-in" style="background-image: url(https://placecage.com/600/600);" data-show-img="children opacity">
-								<div class="box__image-frame" data-vertical="center" data-paroller-factor="0.1">
-									<img src="https://placecage.com/300/300" alt="image">
-								</div>
+					<a href="#" class="box departments__box" data-show-onscroll="10">
+						<div class="box__image">
+							<div class="box__image-in">
+								<div class="box__image-frame" data-vertical="center" style="background-image: url(img/departments-{{item.id or '1'}}.jpg);" data-paroller-factor="0.1"></div>
 							</div>
 						</div>
 						<div class="box__content">
 							<div class="box__title">{{item.title}}</div>
 							<div class="box__meta">{{item.meta}}</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			{% endfor %}
 		</div>

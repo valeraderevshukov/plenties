@@ -3,8 +3,6 @@ import { $WIN } from '../_constants';
 
 export default (function() {
   
-  $WIN.paroller({
-    type: 'foreground'
-  });
+  $WIN.paroller();
 
 })();
