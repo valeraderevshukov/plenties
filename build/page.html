@@ -14,7 +14,7 @@
     <!-- BEGIN content -->
     <div class="out">
       <!-- header -->
-      <header class="header">
+      <header class="header js-header">
         <div class="header__inner inner">
           <!-- btn-menu --><button class="header__btn-menu btn-menu js-btn-menu" type="button">
 			<span class="btn-menu__line btn-menu__line_top"></span>
@@ -53,35 +53,68 @@
 				<img src="./img/logo.svg" alt="logo">
 			</a>
             <div class="menu__wrap">
-              <div class="menu__col ">
-                <div class="menu__title">Navigate</div>
+              <div class="menu__col " data-stagger="group">
+                <div class="menu__title" data-stagger="from-top">Navigate</div>
                 <ul class="menu__list menu__list_">
-                  <li><a href="#">SHOP</a></li>
-                  <li><a href="#">ABOUT</a></li>
-                  <li><a href="#">HELP</a></li>
-                  <li><a href="#">SIGN IN</a></li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										SHOP
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										ABOUT
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										HELP
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										SIGN IN
+									</a> </li>
                 </ul>
               </div>
-              <div class="menu__col sm-show">
-                <div class="menu__title"></div>
+              <div class="menu__col sm-show" data-stagger="group">
+                <div class="menu__title" data-stagger="from-top"></div>
                 <ul class="menu__list menu__list_">
-                  <li><a href="#">FAVORITES</a></li>
-                  <li><a href="#">profile</a></li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										FAVORITES
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										profile
+									</a> </li>
                 </ul>
               </div>
-              <div class="menu__col ">
-                <div class="menu__title">Language</div>
+              <div class="menu__col " data-stagger="group">
+                <div class="menu__title" data-stagger="from-top">Language</div>
                 <ul class="menu__list menu__list_">
-                  <li><a href="#">DANSK</a></li>
-                  <li><a href="#">ENGLISH</a></li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										DANSK
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										ENGLISH
+									</a> </li>
                 </ul>
               </div>
-              <div class="menu__col menu__col_follow">
-                <div class="menu__title">Follow Us</div>
+              <div class="menu__col menu__col_follow" data-stagger="group">
+                <div class="menu__title" data-stagger="from-top">Follow Us</div>
                 <ul class="menu__list menu__list_followUs">
-                  <li><a href="#">instagram</a></li>
-                  <li><a href="#">facebook</a></li>
-                  <li><a href="#">snapchat</a></li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										instagram
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										facebook
+									</a> </li>
+                  <li class="menu__item" data-stagger="from-top"> <a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										snapchat
+									</a> </li>
                 </ul>
               </div>
             </div>
@@ -100,35 +133,41 @@
             <div class="hero__right">
               <div class="proggres-slider js-proggres-slider">
                 <div class="proggres-slider__wrap">
-                  <div class="proggres-slider__slide">
+                  <div class="proggres-slider__slide js-proggres-slide">
                     <a href="#" class="sm-banner">
-                      <div class="sm-banner__number">375.00</div>
-                      <div class="sm-banner__wrap">
-                        <div class="sm-banner__retail">DKK VS 880.50 RETAIL</div>
-                        <div class="sm-banner__save">YOU SAVE 57%</div>
+                      <div class="sm-banner__in">
+                        <div class="sm-banner__number">375.00</div>
+                        <div class="sm-banner__wrap">
+                          <div class="sm-banner__retail">DKK VS 880.50 RETAIL</div>
+                          <div class="sm-banner__save">YOU SAVE 57%</div>
+                        </div>
                       </div>
                     </a>
                   </div>
-                  <div class="proggres-slider__slide">
+                  <div class="proggres-slider__slide js-proggres-slide">
                     <a href="#" class="sm-banner">
-                      <div class="sm-banner__number">460.50</div>
-                      <div class="sm-banner__wrap">
-                        <div class="sm-banner__retail">DKK VS 920.00 RETAIL</div>
-                        <div class="sm-banner__save">YOU SAVE 50%</div>
+                      <div class="sm-banner__in">
+                        <div class="sm-banner__number">460.50</div>
+                        <div class="sm-banner__wrap">
+                          <div class="sm-banner__retail">DKK VS 920.00 RETAIL</div>
+                          <div class="sm-banner__save">YOU SAVE 50%</div>
+                        </div>
                       </div>
                     </a>
                   </div>
-                  <div class="proggres-slider__slide">
+                  <div class="proggres-slider__slide js-proggres-slide">
                     <a href="#" class="sm-banner">
-                      <div class="sm-banner__number">125.00</div>
-                      <div class="sm-banner__wrap">
-                        <div class="sm-banner__retail">DKK VS 340.50 RETAIL</div>
-                        <div class="sm-banner__save">YOU SAVE 63%</div>
+                      <div class="sm-banner__in">
+                        <div class="sm-banner__number">125.00</div>
+                        <div class="sm-banner__wrap">
+                          <div class="sm-banner__retail">DKK VS 340.50 RETAIL</div>
+                          <div class="sm-banner__save">YOU SAVE 63%</div>
+                        </div>
                       </div>
                     </a>
                   </div>
                 </div>
-                <div class="proggres-slider__bar">
+                <div class="proggres-slider__bar js-proggres-slider-bar">
                   <div class="proggres-slider__bar-in"></div>
                 </div>
               </div>

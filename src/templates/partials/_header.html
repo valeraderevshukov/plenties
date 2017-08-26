@@ -1,5 +1,5 @@
 <!-- header -->
-<header class="header">
+<header class="header js-header">
 	<div class="header__inner inner">
 		<!-- btn-menu -->
 		<button class="header__btn-menu btn-menu js-btn-menu" type="button">
@@ -56,11 +56,16 @@
 			</a>
 			<div class="menu__wrap">
 				{% for data in menuData %}
-					<div class="menu__col {% if data.class %}{{ data.class }}{% endif %}">
-						<div class="menu__title">{{ data.title }}</div>
+					<div class="menu__col {% if data.class %}{{ data.class }}{% endif %}" data-stagger="group">
+						<div class="menu__title" data-stagger="from-top">{{ data.title }}</div>
 						<ul class="menu__list menu__list_{% if data.style %}{{ data.style }}{% endif %}">
 							{% for text in data.texts %}
-								<li><a href="#">{{ text }}</a></li>
+								<li class="menu__item" data-stagger="from-top">
+									<a href="#" class="menu__link">
+										<span class="menu__link-bg"></span>
+										{{ text }}
+									</a>
+								</li>
 							{% endfor %}
 						</ul>
 					</div>
