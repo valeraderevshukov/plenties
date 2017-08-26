@@ -4,9 +4,7 @@ export default (function() {
 
   const $features = $('.js-features');
 
-
-  $WIN.on('scroll', function(e) {
-
+  const featuresPosition = () => {
     const winHeight = $WIN.outerHeight();
     const winOffsetTop = $WIN.scrollTop();
     const winOffsetCenter = winOffsetTop + winHeight/2;
@@ -52,13 +50,15 @@ export default (function() {
             'top': `${featuresHeight - navHeight}px`
           });
       }
-      
+
       progress = progress >= 100 ? 100 : progress;
       $bar.css('transform', `translateY(${progress}%)`);
 
     });
+  };
 
-  });
+  featuresPosition();
+  $WIN.on('scroll', featuresPosition);
 
 
 })();
