@@ -6,20 +6,24 @@
 		padding: 120px 0 0
 	&__sidebar
 		float: left
-		margin-top: 167px 
+		// margin-top: 167px 
 		width: 47.17%
 		height: 338px
 		+md
-			margin-top: 80px
+			// margin-top: 80px
 		+xs
 			float: none
 			display: none
 	&__switcher
 		position: relative
 		padding-left: 36px
-		height: 100%
+		height: 338px
 		+vertical
 		text-align: left
+		&.is-fixed
+			position: fixed
+			top: 50%
+			transform: translateY(-50%)
 	&__content
 		float: right
 		width: 52.83%
