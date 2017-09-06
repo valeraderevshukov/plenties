@@ -1,9 +1,23 @@
 .header
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
-	padding-bottom: 29px
+	padding-bottom: 25px
+	z-index: 101
+	&:before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		transition: opacity .3s ease-in-out
+		background-color: $white 
+	&.is-fixed
+		&:before
+			opacity: 1
 	&__btn-menu
 		float: left
 		margin-top: 29px

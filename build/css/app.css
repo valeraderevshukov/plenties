@@ -139,7 +139,11 @@ body { background: #fff; font-family: "Roboto-Light", Helvetica Neue, Helvetica,
   20% { transform: translateY(55px); }
   to { transform: translateY(55px); } }
 
-.header { position: absolute; top: 0; left: 0; right: 0; padding-bottom: 29px; }
+.header { position: fixed; top: 0; left: 0; right: 0; padding-bottom: 25px; z-index: 101; }
+
+.header:before { position: absolute; content: ""; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; transition: opacity .3s ease-in-out; background-color: #fff; }
+
+.header.is-fixed:before { opacity: 1; }
 
 .header__btn-menu { float: left; margin-top: 29px; z-index: 12; }
 
@@ -210,10 +214,6 @@ body { background: #fff; font-family: "Roboto-Light", Helvetica Neue, Helvetica,
 .hero__btn { margin-top: 4px; }
 
 .hero__img { margin: 67px 0 -192px -50px; max-width: 1310px; width: 100vw; }
-
-.no-touch .img:hover .img__inner { -ms-transform: scale(0.95); transform: scale(0.95); }
-
-.no-touch .img:hover .img__inner img { -ms-transform: scale(1.15); transform: scale(1.15); }
 
 .img__inner { overflow: hidden; transition: transform .5s ease-in-out; }
 

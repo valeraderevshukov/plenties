@@ -1,34 +1,38 @@
 <!-- begin contact -->
-<div class="contact">
-	<!-- begin inner -->
-	<div class="inner">
-		<div class="contact__container">
-			<div class="contact__info">
-				<div class="contact__info-in">
-					<h2 class="contact__title" data-show-onscroll="100">Ready to Join Us?</h2>
-					<p>We are happy you’ve found us and we want you to stay. Why not start saving right now?</p>
+<div data-show-img="parent" data-show-onscroll="30">
+	<div data-show-img="children">
+		<div class="contact">
+			<!-- begin inner -->
+			<div class="inner">
+				<div class="contact__container">
+					<div class="contact__info">
+						<div class="contact__info-in">
+							<h2 class="contact__title" data-show-onscroll="100">Ready to Join Us?</h2>
+							<p>We are happy you’ve found us and we want you to stay. Why not start saving right now?</p>
+						</div>
+					</div>
+					{% set form = [
+						{ placeholder: 'Your Email' },
+						{ placeholder: 'Your Name' },
+						{ placeholder: 'Your Password' }
+					] %}
+					<div class="contact__form">
+						<form action="/">
+							{% for item in form %}
+								<div class="contact__field">
+									<input type="text" class="input input_white" placeholder="{{item.placeholder}}">
+								</div>
+							{% endfor %}
+							<div class="contact__buttons clear">
+								<button class="contact__btn pull-left">Join</button>
+								<button class="contact__btn pull-right">I'll do it later</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-			{% set form = [
-				{ placeholder: 'Your Email' },
-				{ placeholder: 'Your Name' },
-				{ placeholder: 'Your Password' }
-			] %}
-			<div class="contact__form">
-				<form action="/">
-					{% for item in form %}
-						<div class="contact__field">
-							<input type="text" class="input input_white" placeholder="{{item.placeholder}}">
-						</div>
-					{% endfor %}
-					<div class="contact__buttons clear">
-						<button class="contact__btn pull-left">Join</button>
-						<button class="contact__btn pull-right">I'll do it later</button>
-					</div>
-				</form>
-			</div>
+			<!-- end inner -->
 		</div>
+		<!-- end contact -->
 	</div>
-	<!-- end inner -->
 </div>
-<!-- end contact -->
