@@ -224,6 +224,14 @@ body {
   border-bottom: 2px solid #ffb82b;
 }
 
+.line_black {
+  border-bottom-color: #000;
+}
+
+.line_h1 {
+  border-bottom-width: 1px;
+}
+
 .out {
   position: relative;
   overflow: hidden;
@@ -1011,7 +1019,7 @@ body {
 }
 
 .board {
-  padding: 190px 0 152px;
+  padding: 190px 0 254px;
 }
 
 .board__img {
@@ -1027,9 +1035,13 @@ body {
 
 .board__content {
   position: relative;
-  float: right;
-  padding: 380px 0 0 36px;
-  width: 50%;
+  margin: 0 auto;
+  padding: 254px 0 0 0;
+  max-width: 470px;
+}
+
+.board__info {
+  max-width: 360px;
 }
 
 .board__line {
@@ -1041,7 +1053,7 @@ body {
 }
 
 .board__title {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .box {
@@ -1672,7 +1684,15 @@ body {
 
   .board__content {
     padding-top: 100px;
-    width: 100%;
+    max-width: 100%;
+  }
+
+  .board__info {
+    max-width: 100%;
+  }
+
+  .board__title br {
+    display: none;
   }
 
   .reviews {
