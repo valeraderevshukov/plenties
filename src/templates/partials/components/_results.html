@@ -2,18 +2,8 @@
 <div class="results">
 	<!-- begin inner -->
 	<div class="inner results__inner">
-		<h2 class="results__title">Our results</h2>
+		{#<h2 class="results__title">Our results</h2>#}
 		<div class="results__container">
-			<div class="results__info">
-				<div class="results__box">
-					<div class="results__subtitle">547 users</div>
-					<div class="results__content">That’s the number of people that are using Plenties already</div>
-				</div>
-				<div class="results__box">
-					<div class="results__subtitle">54 percent</div>
-					<div class="results__content">That’s the average amount our users save on everyday products</div>
-				</div>
-			</div>
 			<div class="results__images">
 				<div class="results__image" data-item="1" data-paroller-factor="0.01" data-paroller-type="foreground">
 					<div class="results__image-frame" data-show-img="parent" data-show-onscroll="50">
@@ -23,6 +13,22 @@
 				<div class="results__image" data-item="2" data-paroller-factor="0.05" data-paroller-type="foreground">
 					<div class="results__image-frame" data-show-img="parent" data-show-onscroll="50">
 						<div class="results__image-in" style="background-image: url(./img/results-img-2.jpg);" data-show-img="children opacity"></div>
+					</div>
+				</div>
+			</div>
+			<div class="results__info" data-show-onscroll="50">
+				<div class="results__box results__box_left">
+					<div data-hidden-anim-parent>
+						<div class="results__subtitle" data-hidden-anim="from-top">54 percent</div>
+						<hr class="results__line" data-hidden-anim="from-left">
+						<div class="results__content" data-hidden-anim="from-bottom">That’s the average amount our users save on everyday products</div>
+					</div>
+				</div>
+				<div class="results__box results__box_right" data-hidden-anim-parent>
+					<div data-hidden-anim-parent>
+						<div class="results__subtitle" data-hidden-anim="from-top">378 USERS</div>
+						<hr class="results__line" data-hidden-anim="from-left">
+						<div class="results__content" data-hidden-anim="from-bottom">That’s the number of people that are using Plenties already</div>
 					</div>
 				</div>
 			</div>

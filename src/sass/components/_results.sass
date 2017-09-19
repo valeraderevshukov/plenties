@@ -1,14 +1,13 @@
 .results
-	margin-top: -120px
-	+md
-		margin-top: -70px
 	&__container
-		padding: 200px 0 158px
+		padding: 360px 0 240px
 		margin: 0 auto
-		max-width: 1007px
+		max-width: 765px
 		+clr
-		+md
-			padding: 30px 0 60px
+		+md 
+			padding: 220px 0
+		+sm
+			padding: 120px 0
 	&__title
 		padding: 54px 0 6px
 		color: $black
@@ -20,52 +19,53 @@
 		+md
 			padding-top: 13px
 	&__info
-		float: left
-		padding-top: 6px
-		max-width: 200px
+		+clr
 		+md
-			float: none
-			padding-bottom: 20px
 			margin: 0 auto
 	&__box
-		padding: 28px 0 26px
-		+md
-			padding: 20px 0 0
-		&:not(:last-child)
-			&:after
-				content: ''
-				display: block
-				border-bottom: 1px solid #d1d1d1
-				max-width: 190px
+		padding: 25px 0
+		max-width: 275px
+		width: 100%
+		+sm
+			float: none
+			margin: 0 auto
+		&_left
+			float: left
+		&_right
+			float: right
 	&__subtitle
-		margin-bottom: 6px
-		+f(ob, 24, 60)
+		+f(ob, 16, 60)
 		text-transform: uppercase
 	&__content
 		+f(rt, 14, 28, 40)
-		margin-bottom: 68px 
-		+md
-			margin-bottom: 30px
+	&__line
+		margin: 0 0 9px
+		border: none
+		border-bottom: 1px solid $black
 	&__images
 		position: relative
-		float: right
-		width: 70%
-		max-width: 617px
-		height: 476px
+		margin-bottom: 245px
+		height: 600px
+		+clr
 		+md
 			float: none
-			margin: 0 auto
+			margin: 0 auto 150px
 			width: 100%
 		+sm
-			max-width: 320px
-			min-height: 750px
+			margin: 0 -30px 120px
+			width: auto
+			max-width: unset
 			height: auto
 	&__image
 		position: absolute
-		width: 320px
-		max-width: 100%
+		width: 52.3%
+		max-width: 400px
 		+sm 
 			position: relative
+			//new
+			float: left 
+			width: 55%
+			margin-right: -10%
 		+ .results__image
 			margin-top: 30px
 		&[data-item="1"]
