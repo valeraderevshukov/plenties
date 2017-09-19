@@ -2,7 +2,7 @@ import { $WIN, ACTIVE, SCROLL_TO } from '../_constants';
 
 ;(function() {
 
-  let $blockItem = $('.js-features-item');
+  let $blockItem = $('.js-navigation-item');
   let link = $('.js-navigation-link');
 
   function onScroll(event) {

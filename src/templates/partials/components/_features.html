@@ -1,10 +1,10 @@
 <!-- features -->
 <div class="features">
-	<div class="features__inner inner js-features">
-		<div class="features__sidebar js-features-sidebar">
-			<div class="features__switcher js-features-nav">
+	<div class="features__inner inner js-navigation-wrap">
+		<div class="features__sidebar js-navigation-sidebar">
+			<div class="features__switcher js-navigation-switcher">
 				<div class="features__navigation-bar navigation-bar">
-					<div class="navigation-bar__in js-features-bar"></div>
+					<div class="navigation-bar__in js-navigation-bar"></div>
 				</div>
 				<!-- navigation -->
 				<div class="features__navigation navigation js-navigation">
@@ -39,7 +39,7 @@
 				}
 			] %}
 			{% for data in featuresData %}
-				<div class="features__item js-features-item" id="{{data.id}}" data-show-onscroll="30">
+				<div class="features__item js-navigation-item" id="{{data.id}}" data-show-onscroll="30">
 					<div class="features__title title-sm" data-hidden-anim-parent>
 						<span data-hidden-anim="from-left">{{ data.title | safe}}</span>
 					</div>
