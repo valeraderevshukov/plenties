@@ -1171,14 +1171,10 @@ body {
   letter-spacing: 0.042em;
 }
 
-.results {
-  margin-top: -120px;
-}
-
 .results__container {
-  padding: 200px 0 158px;
+  padding: 360px 0 240px;
   margin: 0 auto;
-  max-width: 1007px;
+  max-width: 765px;
 }
 
 .results__container:after {
@@ -1200,29 +1196,31 @@ body {
   text-transform: uppercase;
 }
 
-.results__info {
-  float: left;
-  padding-top: 6px;
-  max-width: 200px;
+.results__info:after {
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 .results__box {
-  padding: 28px 0 26px;
+  padding: 25px 0;
+  max-width: 275px;
+  width: 100%;
 }
 
-.results__box:not(:last-child):after {
-  content: '';
-  display: block;
-  border-bottom: 1px solid #d1d1d1;
-  max-width: 190px;
+.results__box_left {
+  float: left;
+}
+
+.results__box_right {
+  float: right;
 }
 
 .results__subtitle {
-  margin-bottom: 6px;
   font-family: "OpenSans-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 2.5;
+  font-size: 16px;
+  line-height: 3.75;
   text-transform: uppercase;
 }
 
@@ -1232,15 +1230,18 @@ body {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.04em;
-  margin-bottom: 68px;
+}
+
+.results__line {
+  margin: 0 0 9px;
+  border: none;
+  border-bottom: 1px solid #000;
 }
 
 .results__images {
   position: relative;
-  float: right;
-  width: 70%;
-  max-width: 617px;
-  height: 476px;
+  margin-bottom: 245px;
+  height: 600px;
 }
 
 .results__images:after {
@@ -1251,8 +1252,8 @@ body {
 
 .results__image {
   position: absolute;
-  width: 320px;
-  max-width: 100%;
+  width: 52.3%;
+  max-width: 400px;
 }
 
 .results__image + .results__image {
@@ -1690,12 +1691,8 @@ body {
     max-width: 60%;
   }
 
-  .results {
-    margin-top: -70px;
-  }
-
   .results__container {
-    padding: 30px 0 60px;
+    padding: 220px 0;
   }
 
   .results__title {
@@ -1703,22 +1700,12 @@ body {
   }
 
   .results__info {
-    float: none;
-    padding-bottom: 20px;
     margin: 0 auto;
-  }
-
-  .results__box {
-    padding: 20px 0 0;
-  }
-
-  .results__content {
-    margin-bottom: 30px;
   }
 
   .results__images {
     float: none;
-    margin: 0 auto;
+    margin: 0 auto 150px;
     width: 100%;
   }
 
@@ -1843,11 +1830,20 @@ body {
     max-width: 100%;
   }
 
+  .results__container {
+    padding: 120px 0;
+  }
+
+  .results__box {
+    float: none;
+    margin: 0 auto;
+  }
+
   .results__images {
-    height: auto;
+    margin: 0 -30px 120px;
     width: auto;
     max-width: unset;
-    margin: 0 -30px;
+    height: auto;
   }
 
   .results__image {
