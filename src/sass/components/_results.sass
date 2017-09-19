@@ -52,19 +52,28 @@
 		width: 70%
 		max-width: 617px
 		height: 476px
+		+clr
 		+md
 			float: none
 			margin: 0 auto
 			width: 100%
 		+sm
-			max-width: 320px
+			// max-width: 320px
 			height: auto
+			//new
+			width: auto
+			max-width: unset
+			margin: 0 -30px
 	&__image
 		position: absolute
 		width: 320px
 		max-width: 100%
 		+sm 
 			position: relative
+			//new
+			float: left 
+			width: 55%
+			margin-right: -10%
 		+ .results__image
 			margin-top: 30px
 		&[data-item="1"]

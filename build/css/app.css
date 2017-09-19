@@ -1233,6 +1233,12 @@ body {
   height: 476px;
 }
 
+.results__images:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
 .results__image {
   position: absolute;
   width: 320px;
@@ -1360,7 +1366,7 @@ body {
 
 .footer:before {
   left: 0;
-  background: #fff;
+  background: #f8f8f8;
 }
 
 .footer:after {
@@ -1828,12 +1834,17 @@ body {
   }
 
   .results__images {
-    max-width: 320px;
     height: auto;
+    width: auto;
+    max-width: unset;
+    margin: 0 -30px;
   }
 
   .results__image {
     position: relative;
+    float: left;
+    width: 55%;
+    margin-right: -10%;
   }
 
   .results__image[data-item="1"] {
@@ -1853,7 +1864,7 @@ body {
 
   .footer {
     padding: 40px 0;
-    background: #fff;
+    background: #f8f8f8;
   }
 
   .footer:before, .footer:after {
