@@ -1,6 +1,6 @@
 .footer
 	position: relative
-	padding: 99px 0
+	padding: 99px 0 5px
 	+sm
 		padding: 40px 0
 		background: #f8f8f8
@@ -24,10 +24,11 @@
 		+clr
 	&__col
 		float: left
-		padding: 0 15px
+		// padding: 0 15px
 		width: 50%
 		+sm
-			padding: 20px 15px
+			// padding: 20px 15px
+			padding: 20px 0
 			width: 100%
 		// &:last-child
 		// 	+sm
@@ -37,12 +38,15 @@
 		+clr
 		+sm
 			margin-bottom: 50px
-	&__list,
-	&__logo
+	&__title
+		+f(rb,12,32,40)
+	&__box
 		float: left
+		padding: 0 15px
+		margin-bottom: 60px
 		width: 50%
 	&__logo
-		padding: 4px 12px 0
+		padding-top: 2px
 		a
 			display: inline-block
 			vertical-align: top

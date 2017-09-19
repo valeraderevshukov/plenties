@@ -1240,7 +1240,7 @@ body {
 
 .results__images {
   position: relative;
-  margin-bottom: 245px;
+  margin-bottom: 130px;
   height: 600px;
 }
 
@@ -1364,7 +1364,7 @@ body {
 
 .footer {
   position: relative;
-  padding: 99px 0;
+  padding: 99px 0 5px;
 }
 
 .footer:before, .footer:after {
@@ -1397,7 +1397,6 @@ body {
 
 .footer__col {
   float: left;
-  padding: 0 15px;
   width: 50%;
 }
 
@@ -1411,13 +1410,23 @@ body {
   clear: both;
 }
 
-.footer__list, .footer__logo {
+.footer__title {
+  font-family: "Roboto-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 2.66667;
+  letter-spacing: 0.04em;
+}
+
+.footer__box {
   float: left;
+  padding: 0 15px;
+  margin-bottom: 60px;
   width: 50%;
 }
 
 .footer__logo {
-  padding: 4px 12px 0;
+  padding-top: 2px;
 }
 
 .footer__logo a {
@@ -1878,7 +1887,7 @@ body {
   }
 
   .footer__col {
-    padding: 20px 15px;
+    padding: 20px 0;
     width: 100%;
   }
 
