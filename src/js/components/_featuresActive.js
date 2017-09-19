@@ -23,6 +23,6 @@ import { $WIN, ACTIVE, SCROLL_TO } from '../_constants';
   	SCROLL_TO(position);
   });
 
-  $WIN.on('scroll', onScroll);
+  $WIN.on('scroll touchend', onScroll);
   
 })();
