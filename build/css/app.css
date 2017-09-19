@@ -1556,23 +1556,23 @@ body {
 }
 
 [data-hidden-anim="from-top"] {
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+  -ms-transform: translateY(-100rem);
+  transform: translateY(-100rem);
 }
 
 [data-hidden-anim="from-bottom"] {
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
+  -ms-transform: translateY(100rem);
+  transform: translateY(100rem);
 }
 
 [data-hidden-anim="from-left"] {
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+  -ms-transform: translateX(-100rem);
+  transform: translateX(-100rem);
 }
 
 [data-hidden-anim="from-right"] {
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
+  -ms-transform: translateX(100rem);
+  transform: translateX(100rem);
 }
 
 @media only screen and (max-width: 1279px) {
