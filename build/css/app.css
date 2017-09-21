@@ -1708,7 +1708,7 @@ body {
   }
 
   .board__img {
-    margin: 0 -105px -98px;
+    margin: 0 -105px;
   }
 }
 
@@ -1754,6 +1754,10 @@ body {
     display: none;
   }
 
+  .hero__img {
+    margin: 67px -50px -98px;
+  }
+
   .information {
     padding: 150px 0;
   }
@@ -1785,6 +1789,10 @@ body {
 
   .board {
     padding: 100px 0;
+  }
+
+  .board__img {
+    margin: 0 -50px;
   }
 
   .board__content {
@@ -1910,6 +1918,11 @@ body {
 
   .menu__item:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+  .img img {
+    width: auto;
+    max-width: 110%;
   }
 
   .information {
