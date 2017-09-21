@@ -1706,6 +1706,10 @@ body {
     margin: 67px -105px -98px;
     width: auto;
   }
+
+  .board__img {
+    margin: 0 -105px -98px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
