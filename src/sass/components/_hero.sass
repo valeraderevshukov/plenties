@@ -6,6 +6,8 @@
 		display: table
 		table-layout: fixed
 		width: 100%
+		+lg
+			table-layout: initial
 	&__left,
 	&__right
 		display: table-cell
@@ -17,12 +19,13 @@
 	&__right
 		width: 46.4%
 		vertical-align: bottom
-		+lg
+		+md
 			display: none
 	&__title
 		max-width: 495px
 		+lg
 			max-width: 795px
+			font-size: 60px
 			br
 				display: none
 	&__btn-shade
@@ -50,7 +53,7 @@
 	img
 		margin: -5% 
 		max-height: 110%
-		max-width: 110%
+		width: 110%
 		display: block
 		transition: transform .5s ease-in-out
 
